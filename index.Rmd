@@ -1,0 +1,96 @@
+---
+title: |
+  |  Angewandte Zuchtwertschätzung und 
+  |  Angewandte statistische Methoden
+author: "Birgit Gredler und Peter von Rohr"
+date: "2017-02-14"
+output: 
+  html_document:
+    toc_float: true
+    toc: true
+    theme: united
+    highlight: tango
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+__Willkommen__ auf der Webseite von
+
+- [751-6212-00L Angewandte Zuchtwertschätzung für Nutztiere](https://www.lehrbetrieb.ethz.ch/edoz/kommLerneinheitPre.do?i=0)
+- [751-7602-00L	Angewandte statistische Methoden in den Nutztierwissenschaften](https://www.lehrbetrieb.ethz.ch/edoz/kommLehrveranstaltungPre.do?i=1&j=0)
+
+## Beschreibung
+Die Kursbeschreibung ist dem Vorlesungsverzeichnis entnommen.
+
+### Angewandte Zuchtwertschätzung für Nutztiere (BG)
+Die nationalen Zuchtwertschätzungen bei Rind, Schwein, Schaf und Ziege in der Schweiz werden anhand der verwendeten Methoden und Merkmalen erklärt. Zur Vertiefung werden fallweise Beispiele berechnet.
+
+### Angewandte statistische Methoden in den Nutztierwissenschaften (PvR)
+Die genomische Selektion ist in der Tierzucht die Methode der Wahl, das Leistungspotential der Selektionskandidaten zu verbessern. In dieser Vorlesung wird erklärt, weshalb Regressionen in der genomischen Selektion nicht verwendet werden können und was dann die Alternativen sind. Die vorgestellten Konzepte werden mit Übungen in R veranschaulicht.
+
+## Information
+- Dozierende: Birgit Gredler (BG) und Peter von Rohr (PvR)
+- Datum: Montag 8-10
+- Ort: [LFW C11](http://www.mapsearch.ethz.ch/map/map.do?gebaeudeMap=LFW&lang=en)
+
+## Prüfung
+- Montag 29.05.2017
+
+## Fragen
+Fragen können jederzeit während der Vorlesung und während der Übungsstunde oder via Email gestellt werden: 
+
+- BG (birgit.gredler `at` qualitasag.ch)
+- PvR (peter.vonrohr `at` gmail.com)
+
+## Material
+Die Folien zur Vorlesung, die Übungen und die Lösungen zu den Übungen können von dieser Webseite heruntergeladen werden. 
+
+
+### Folien
+```{r SlidesTable, echo=FALSE, results='asis'}
+# define course start date
+dCourseStart <- as.Date("2017/02/20")
+# set number of weeks in semester
+nNrSemesterWeeks <- 15
+# define columns for weaks, dates, and subjects
+Woche <- 1:nNrSemesterWeeks
+Datum <- format(seq(dCourseStart, by = "week", length.out = nNrSemesterWeeks), "%d.%m")
+Thema <- vector(mode = "character", length = nNrSemesterWeeks)
+Wer <-  vector(mode = "character", length = nNrSemesterWeeks)
+Wer[1:6] <- "PvR"
+Wer[7:nNrSemesterWeeks] <- "BG"
+# set subject for special dates
+# holiday
+sEasterMon <- format(as.Date("2017/04/17"), "%d.%m")
+nEasterMon <- which(Datum == sEasterMon)
+Thema[nEasterMon] <- "Ostermontag"
+Wer[nEasterMon] <- ""
+sLaborDay <- format(as.Date("2017/05/01"), "%d.%m")
+nLaborDay <- which(Datum == sLaborDay)
+Thema[nLaborDay] <- "Tag der Arbeit"
+Wer[nLaborDay] <- ""
+  
+# exam
+Thema[length(Thema)] <- "Prüfung"
+Wer[length(Wer)] <- "BG, PvR"
+
+### # create the table
+dfSlideTable <- data.frame(Woche, Datum, Thema, Wer, stringsAsFactors = FALSE)
+knitr::kable(dfSlideTable)
+```
+
+
+
+### Übungen
+
+
+### Lösungen
+
+
+### Weiteres Material
+
+      
+## Letzte Änderung
+_`r paste(Sys.time(),paste0("(", Sys.info()[["user"]],")" ))`_
