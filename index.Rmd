@@ -76,6 +76,10 @@ Wer[nLaborDay] <- ""
 Thema[length(Thema)] <- "Prüfung"
 Wer[length(Wer)] <- "BG, PvR"
 
+# links zu slides
+sBaseUrl <- "https://charlotte-ngs.github.io/GELASMFS2017/"
+Thema[which(Datum == format(as.Date("2017/02/20"), "%d.%m"))] <- paste0("Einführung ([slides](", sBaseUrl,"w1/asmas_w1_v1.pdf))")
+
 ### # create the table
 dfSlideTable <- data.frame(Woche, Datum, Thema, Wer, stringsAsFactors = FALSE)
 knitr::kable(dfSlideTable)
