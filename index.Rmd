@@ -76,6 +76,14 @@ Wer[nLaborDay] <- ""
 Thema[length(Thema)] <- "Prüfung"
 Wer[length(Wer)] <- "BG, PvR"
 
+# links zu slides
+sBaseUrl <- "https://charlotte-ngs.github.io/GELASMFS2017/"
+Thema[which(Datum == format(as.Date("2017/02/20"), "%d.%m"))] <- paste0("Einführung ([slides](", sBaseUrl,"w1/asmas_w1_v1.pdf))([notes](", 
+                                                                        sBaseUrl, "w1/bookdown-asmas.pdf))")
+Thema[which(Datum == format(as.Date("2017/02/27"), "%d.%m"))] <- paste0("Lineare Regression ([slides](", sBaseUrl,"w2/asmas_w2_v2.pdf))")
+Thema[which(Datum == format(as.Date("2017/03/06"), "%d.%m"))] <- paste0("Lineare Regression II ([slides](", sBaseUrl,"w3/asmas_w3_v3.pdf))([notes](", 
+                                                                        sBaseUrl, "w3/bookdown-asmas_ch2.pdf))")
+
 ### # create the table
 dfSlideTable <- data.frame(Woche, Datum, Thema, Wer, stringsAsFactors = FALSE)
 knitr::kable(dfSlideTable)
@@ -84,12 +92,64 @@ knitr::kable(dfSlideTable)
 
 
 ### Übungen
+```{r ExTable, echo=FALSE, results='asis'}
+dExStart <- as.Date("2017/02/20")
+# set number of weeks in semester
+nNrSemesterWeeks <- 6
+# define columns for weaks, dates, and subjects
+Woche <- 1:nNrSemesterWeeks
+Datum <- format(seq(dExStart, by = "week", length.out = nNrSemesterWeeks), "%d.%m")
+Thema <- vector(mode = "character", length = nNrSemesterWeeks)
+Wer <-  vector(mode = "character", length = nNrSemesterWeeks)
+Wer[2:6] <- "PvR"
+
+# links zu slides
+sBaseUrl <- "https://charlotte-ngs.github.io/GELASMFS2017/"
+Thema[which(Datum == format(as.Date("2017/02/27"), "%d.%m"))] <- paste0("[Einführung](", sBaseUrl,"w2/asmas_w2_u1.pdf)")
+Thema[which(Datum == format(as.Date("2017/03/06"), "%d.%m"))] <- paste0("[Deregression](", sBaseUrl,"w3/asmas_w3_u2.pdf)")
+### # Table
+dfExTable <- data.frame(Woche, Datum, Thema, Wer, stringsAsFactors = FALSE)
+knitr::kable(dfExTable)
+```
+
 
 
 ### Lösungen
+```{r SolTable, echo=FALSE, results='asis'}
+dSolStart <- as.Date("2017/02/20")
+# set number of weeks in semester
+nNrSemesterWeeks <- 6
+# define columns for weaks, dates, and subjects
+Woche <- 1:nNrSemesterWeeks
+Datum <- format(seq(dExStart, by = "week", length.out = nNrSemesterWeeks), "%d.%m")
+Thema <- vector(mode = "character", length = nNrSemesterWeeks)
+Wer <-  vector(mode = "character", length = nNrSemesterWeeks)
+Wer[2:6] <- "PvR"
+
+# links zu slides
+sBaseUrl <- "https://charlotte-ngs.github.io/GELASMFS2017/"
+Thema[which(Datum == format(as.Date("2017/03/06"), "%d.%m"))] <- paste0("[Einführung](", sBaseUrl,"w2/asmas_w2_l1.pdf)")
+### # Table
+dSolStart <- data.frame(Woche, Datum, Thema, Wer, stringsAsFactors = FALSE)
+knitr::kable(dSolStart)
+```
 
 
 ### Weiteres Material
+```{r MiscTable, echo=FALSE, results='asis'}
+sBaseUrl <- "https://charlotte-ngs.github.io/GELASMFS2017/"
+Woche <- c(2,2)
+Datum <- c(format(as.Date("2017/02/27"), "%d.%m"),
+           format(as.Date("2017/02/27"), "%d.%m"))
+Thema <- c(paste0("[Unterlagen](", sBaseUrl, "bookdown-asmas/index.html)"),
+           paste0("[Zusammenfassung Deregression](", sBaseUrl, "w2/DeRegressEbvSummaryGTF2009.pdf)"))
+Wer <- c("PvR","PvR")
+
+### # Tabelle
+dfMiscTable <- data.frame(Woche, Datum, Thema, Wer, stringsAsFactors = FALSE)
+knitr::kable(dfMiscTable)
+```
+
 
       
 ## Letzte Änderung
