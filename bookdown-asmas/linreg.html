@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Angewandte Statistische Methoden in den Nutztierwissenschaften</title>
+  <meta name="description" content="Unterlagen zur Vorlesung Angewandte Statistische Methoden in den Nutztierwissenschaften.">
+  <meta name="generator" content="bookdown 0.3.9 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Angewandte Statistische Methoden in den Nutztierwissenschaften" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Unterlagen zur Vorlesung Angewandte Statistische Methoden in den Nutztierwissenschaften." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Angewandte Statistische Methoden in den Nutztierwissenschaften" />
+  
+  <meta name="twitter:description" content="Unterlagen zur Vorlesung Angewandte Statistische Methoden in den Nutztierwissenschaften." />
+  
+
+<meta name="author" content="Peter von Rohr">
+
+
+<meta name="date" content="2017-03-10">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="intro.html">
+<link rel="next" href="abkurzungen.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Angewandte Statistische Methoden</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Vorwort</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#motivation"><i class="fa fa-check"></i>Motivation</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#einordnung"><i class="fa fa-check"></i>Einordnung</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#lernziele"><i class="fa fa-check"></i>Lernziele</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Einführung</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#problem"><i class="fa fa-check"></i><b>1.1</b> Beschreibung des Problems</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#background"><i class="fa fa-check"></i><b>1.2</b> Rückblick</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#paradigmenwechsel"><i class="fa fa-check"></i><b>1.2.1</b> Paradigmenwechsel</a></li>
+<li class="chapter" data-level="1.2.2" data-path="intro.html"><a href="intro.html#vor-der-genomischen-selektion"><i class="fa fa-check"></i><b>1.2.2</b> Vor der genomischen Selektion</a></li>
+<li class="chapter" data-level="1.2.3" data-path="intro.html"><a href="intro.html#modellierung-vor-der-genomischen-selektion"><i class="fa fa-check"></i><b>1.2.3</b> Modellierung vor der genomischen Selektion</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#gensel"><i class="fa fa-check"></i><b>1.3</b> Genomische Selektion</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="intro.html"><a href="intro.html#modellierung"><i class="fa fa-check"></i><b>1.3.1</b> Modellierung</a></li>
+<li class="chapter" data-level="1.3.2" data-path="intro.html"><a href="intro.html#zwei-schritt-verfahren"><i class="fa fa-check"></i><b>1.3.2</b> Zwei-Schritt-Verfahren</a></li>
+<li class="chapter" data-level="1.3.3" data-path="intro.html"><a href="intro.html#eigenschaften-von-blup-zuchtwerten"><i class="fa fa-check"></i><b>1.3.3</b> Eigenschaften von BLUP-Zuchtwerten</a></li>
+<li class="chapter" data-level="1.3.4" data-path="intro.html"><a href="intro.html#einsatz-von-blup-zuchtwerten-in-der-genomischen-selektion"><i class="fa fa-check"></i><b>1.3.4</b> Einsatz von BLUP-Zuchtwerten in der genomischen Selektion</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#zusammenfassung"><i class="fa fa-check"></i><b>1.4</b> Zusammenfassung</a></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#ausblick"><i class="fa fa-check"></i><b>1.5</b> Ausblick</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>2</b> Multiple Lineare Regression</a><ul>
+<li class="chapter" data-level="2.1" data-path="linreg.html"><a href="linreg.html#beispiele-fur-lineare-regressionen"><i class="fa fa-check"></i><b>2.1</b> Beispiele für Lineare Regressionen</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="linreg.html"><a href="linreg.html#regression-mit-achsenabschnitt"><i class="fa fa-check"></i><b>2.1.1</b> Regression mit Achsenabschnitt</a></li>
+<li class="chapter" data-level="2.1.2" data-path="linreg.html"><a href="linreg.html#regression-durch-den-ursprung"><i class="fa fa-check"></i><b>2.1.2</b> Regression durch den Ursprung</a></li>
+<li class="chapter" data-level="2.1.3" data-path="linreg.html"><a href="linreg.html#regression-mit-transformierten-variablen"><i class="fa fa-check"></i><b>2.1.3</b> Regression mit transformierten Variablen</a></li>
+<li class="chapter" data-level="2.1.4" data-path="linreg.html"><a href="linreg.html#anwendungen-in-den-nutztierwissenschaften"><i class="fa fa-check"></i><b>2.1.4</b> Anwendungen in den Nutztierwissenschaften</a></li>
+<li class="chapter" data-level="2.1.5" data-path="linreg.html"><a href="linreg.html#ziele-der-linearen-regression"><i class="fa fa-check"></i><b>2.1.5</b> Ziele der linearen Regression</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="linreg.html"><a href="linreg.html#methode-der-kleinsten-quadrate-least-squares"><i class="fa fa-check"></i><b>2.2</b> Methode der kleinsten Quadrate (Least Squares)</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="linreg.html"><a href="linreg.html#annahmen-hinter-dem-linearen-modell"><i class="fa fa-check"></i><b>2.2.1</b> Annahmen hinter dem linearen Modell</a></li>
+<li class="chapter" data-level="2.2.2" data-path="linreg.html"><a href="linreg.html#kein-ersatz-der-multiplen-regression-durch-mehrere-einfache-regressionen"><i class="fa fa-check"></i><b>2.2.2</b> Kein Ersatz der multiplen Regression durch mehrere einfache Regressionen</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="linreg.html"><a href="linreg.html#eigenschaften-der-schatzungen"><i class="fa fa-check"></i><b>2.3</b> Eigenschaften der Schätzungen</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="linreg.html"><a href="linreg.html#momente-der-least-squares-schatzungen"><i class="fa fa-check"></i><b>2.3.1</b> Momente der Least-Squares Schätzungen</a></li>
+<li class="chapter" data-level="2.3.2" data-path="linreg.html"><a href="linreg.html#verteilung-der-least-squares-schatzer-unter-normalverteilten-fehlern"><i class="fa fa-check"></i><b>2.3.2</b> Verteilung der Least-Squares-Schätzer unter normalverteilten Fehlern</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="linreg.html"><a href="linreg.html#tests-und-vertrauensintervalle"><i class="fa fa-check"></i><b>2.4</b> Tests und Vertrauensintervalle</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="linreg.html"><a href="linreg.html#einzeltests"><i class="fa fa-check"></i><b>2.4.1</b> Einzeltests</a></li>
+<li class="chapter" data-level="2.4.2" data-path="linreg.html"><a href="linreg.html#globaler-test"><i class="fa fa-check"></i><b>2.4.2</b> Globaler Test</a></li>
+<li class="chapter" data-level="2.4.3" data-path="linreg.html"><a href="linreg.html#vertrauensintervalle"><i class="fa fa-check"></i><b>2.4.3</b> Vertrauensintervalle</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="linreg.html"><a href="linreg.html#output-von-r"><i class="fa fa-check"></i><b>2.5</b> Output von R</a></li>
+<li class="chapter" data-level="2.6" data-path="linreg.html"><a href="linreg.html#analyse-der-residuen-und-uberprufung-der-modellannahmen"><i class="fa fa-check"></i><b>2.6</b> Analyse der Residuen und Überprüfung der Modellannahmen</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="linreg.html"><a href="linreg.html#tukey-anscombe-plot"><i class="fa fa-check"></i><b>2.6.1</b> Tukey-Anscombe Plot</a></li>
+<li class="chapter" data-level="2.6.2" data-path="linreg.html"><a href="linreg.html#der-qq-plot"><i class="fa fa-check"></i><b>2.6.2</b> Der QQ-Plot</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="linreg.html"><a href="linreg.html#selektion-eines-modells"><i class="fa fa-check"></i><b>2.7</b> Selektion eines Modells</a><ul>
+<li class="chapter" data-level="2.7.1" data-path="linreg.html"><a href="linreg.html#mallows-c_p-statistik"><i class="fa fa-check"></i><b>2.7.1</b> Mallows <span class="math inline">\(C_p\)</span>-Statistik</a></li>
+<li class="chapter" data-level="2.7.2" data-path="linreg.html"><a href="linreg.html#modellwahl-mit-dem-c_p-kriterium"><i class="fa fa-check"></i><b>2.7.2</b> Modellwahl mit dem <span class="math inline">\(C_p\)</span>-Kriterium</a></li>
+<li class="chapter" data-level="2.7.3" data-path="linreg.html"><a href="linreg.html#bemerkungen"><i class="fa fa-check"></i><b>2.7.3</b> Bemerkungen</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="abkurzungen.html"><a href="abkurzungen.html"><i class="fa fa-check"></i>Abkürzungen</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Angewandte Statistische Methoden in den Nutztierwissenschaften</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="linreg" class="section level1">
+<h1><span class="header-section-number">Kapitel 2</span> Multiple Lineare Regression</h1>
+<p>Das Material dieses Kapitels ist eine Zusammenfassung aus den Vorlesungsunterlagen von <span class="citation">(Bühlmann and Mächler <a href="#ref-BM2014">2014</a>)</span>.</p>
+<p>Die multiple lineare Regression ist wie folgt definiert. Jedes Individuum <span class="math inline">\(i\)</span> oder jedes Objekt <span class="math inline">\(i\)</span> in einem Datensatz ist charakterisiert durch eine <strong>Zielgrösse</strong> <span class="math inline">\(y_i\)</span> und durch eine Menge von <strong>erklärenden Variablen</strong> <span class="math inline">\(\left\{x_{i,1}, x_{i,2}, \ldots, x_{i,p}\right\}\)</span>. Zusammengefasst besteht die bekannte Information für jedes Individuum oder jedes Objekt <span class="math inline">\(i\)</span> aus einem Datensatz aus der folgenden Menge</p>
+<p><span class="math display">\[\left\{x_{i,1}, x_{i,2}, \ldots, x_{i,p}, y_i\right\}\]</span> Das multiple lineare Regressionsmodell versucht die Zielgrösse bis auf einen zufälligen Restterm <span class="math inline">\(\epsilon\)</span> als lineare Funktion der erklärenden Variablen auszudrücken. Unser Ziel besteht in der Schätzung der unbekannten Parameter, welche im Regressionsmodell enthalten sind. Die nachfolgend gezeigte Modellformel soll die Unterscheidung zwischen erklärenden Variablen und unbekannten Parametern verdeutlichen.</p>
+<span class="math display">\[\begin{equation}
+y_i = \beta_i x_{i,1} + \ldots + \beta_p x_{i,p} + \epsilon_i \qquad (i = 1, \ldots, n)
+\label{eq:MultLinRegForm}
+\end{equation}\]</span>
+<p>Fassen wir die Gleichungen über alle <span class="math inline">\((i = 1, \ldots, n)\)</span> zusammen und verwenden die Matrix-Vektor-Notation, so sieht das lineare Modell in () wie folgt aus.</p>
+<span class="math display">\[\begin{equation}
+y = X\beta + \epsilon
+\label{eq:MultLinRegMatVec}
+\end{equation}\]</span>
+
+<p>Die Reste <span class="math inline">\(\epsilon_i\)</span> im Modell () haben wir als zufällige Effekte definiert. Somit müssen wir geeignete Annahmen zur Dichteverteilung der <span class="math inline">\(\epsilon_i\)</span> treffen. Meistens gehen wir davon aus, dass die <span class="math inline">\(\epsilon_i\)</span> unabhängig sind und der gleichen Verteilung folgen. In der englischsprachigen Literatur wird das mit dem Begriff <code>independent, identically distributed</code> (i.i.d.) bezeichnet. Der Erwartungswert und die Varianz der Zufallsvariablen <span class="math inline">\(\epsilon\)</span> sind <span class="math inline">\(E\left[\epsilon_i \right] = 0\)</span> und <span class="math inline">\(Var(\epsilon_i) = \sigma^2\)</span>.</p>
+<div id="beispiele-fur-lineare-regressionen" class="section level2">
+<h2><span class="header-section-number">2.1</span> Beispiele für Lineare Regressionen</h2>
+<div id="regression-mit-achsenabschnitt" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Regression mit Achsenabschnitt</h3>
+<p>Die erste erklärende Variable wir oft als eine Konstante angenommen. Das bedeutet, dass der erste Kolonnenvektor in der Matrix <span class="math inline">\(X\)</span> gleich dem Eins-Vektor ist. Die konstante erklärende Variable erlaubt es einen sogenannten <strong>Achsenabschnitt</strong> anzupassen. In skalarer Schreibweise hat das lineare Modell mit Achsenabschnitt die folgende Form</p>
+<span class="math display">\[\begin{equation}y_i = \beta_1 + \beta_2x_{i2} + \ldots + \beta_px_{ip} + \epsilon_i \qquad (i = 1,\ldots,n)\end{equation}\]</span>
+</div>
+<div id="regression-durch-den-ursprung" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Regression durch den Ursprung</h3>
+<p>Im Gegensatz zur Regression mit Achsenabschnitt steht die Regression durch den Ursprung. Diese kennt keine konstante erklärende Variable. Das Modell ohne Achsenabschnitt sieht dann wie folgt aus.</p>
+<span class="math display">\[\begin{equation}y_i = \beta_1x_{i1}+ \ldots + \beta_px_{ip} + \epsilon_i \qquad (i = 1,\ldots,n)\end{equation}\]</span>
+</div>
+<div id="regression-mit-transformierten-variablen" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> Regression mit transformierten Variablen</h3>
+<p>Regressionen können auch auf Transformationen der erklärenden Variablen oder auf transformierte Zielgrössen angepasst werden. Als Beispiel verwendet die sogenannte “quadratische” Regression die <span class="math inline">\(x_{ij}\)</span> und die <span class="math inline">\(x_{ij}^2\)</span> als erklärende Variablen. Das Modell entspricht dann einer quadratischen Funktion in den <span class="math inline">\(x_j\)</span> ist aber immer noch eine lineare Funktion im Bezug auf die Parameter <span class="math inline">\(\beta_j\)</span>.</p>
+<span class="math display">\[\begin{equation}y_i = \beta_1 + \beta_2 x_{i2} + \beta_3 x_{i2}^2 + \epsilon_i \qquad (i = 1,\ldots,n)\end{equation}\]</span>
+<p>Abgesehen von der quadratischen Regression sind auch andere Arten von Transformationen der erklärenden Variablen denkbar. Ein Beipsiel ist in der folgenden Gleichung gezeigt.</p>
+<span class="math display">\[\begin{equation}y_i = \beta_i + \beta_2 \log(x_{i2}) + \beta_3 sin(\pi x_{i3}) + \epsilon_i \qquad (i = 1,\ldots,n)\end{equation}\]</span>
+<p>Auch dieses Modell ist <em>linear</em> in den Parametern <span class="math inline">\(\beta_j\)</span> und wird somit als lineare Regression bezeichnet.</p>
+</div>
+<div id="anwendungen-in-den-nutztierwissenschaften" class="section level3">
+<h3><span class="header-section-number">2.1.4</span> Anwendungen in den Nutztierwissenschaften</h3>
+<p>Eine Anwendung der linearen Regression in den Nutztierwissenschaften ist die Schätzung vom Lebendgewicht von Tieren aufgrund des Brustumfangs. Dafür werden Messbänder verwendet, welche auf der einen Seite den Brustumfang angeben und auf der anderen Seite das geschätzte Körpergewicht. Diese Anwendung macht eine Voraussage der Zielgrösse <code>Körpergewicht</code> aufgrund der beobachteten erklärenden Variablen <code>Brustumfang</code>.</p>
+<p>Damit eine Voraussage für die Zielgrösse aufgrund der erklärenden Variablen möglich ist, muss zuerst ein angemessener Datensatz vorliegen, in welchem man für jedes Tier beide Informationen, also sowohl Körpergewicht als auch Brustumfang bekannt ist. Aufgrund dieser Informationen können dann die unbekannten Parameter geschätzt werden. Die geschätzten Parameter werden dann für die Vorhersagen verwendet.</p>
+<p>Bei diesem ersten Beispiel handelt es sich um eine einfache lineare Regression. Das verwendete Regressionsmodelle hat nur eine erklärende Variable (<code>Brustumfang</code>) und eine Zielvariable (<code>Gewicht</code>). Das zu dieser Anwendung zugehörige Modell lautet</p>
+<span class="math display">\[\begin{equation}y_{G,i} = \beta_1 + \beta_2 x_{B,i} + \epsilon_i\end{equation}\]</span>
+</div>
+<div id="ziele-der-linearen-regression" class="section level3">
+<h3><span class="header-section-number">2.1.5</span> Ziele der linearen Regression</h3>
+<ul>
+<li><p><strong>Gute Anpassung</strong>: das Modell soll so sein, dass die erklärenden Variablen möglichst präzise Voraussagen zu den Zielvariablen machen. Das Standardtool für die Anpassung ist die Methode der kleinsten Quadrate (<code>Least Squares</code>).</p></li>
+<li><p><strong>Parameterschätzung</strong>: die unbekannten Parameter sollen so geschätzt sein, dass eine Veränderung der erklärenden Variablen in einer entsprechenden Veränderung der Zielgrösse führt.</p></li>
+<li><p><strong>Vorhersage</strong>: noch nicht beobachtete Zielgrössen sollen als Funktionen von erklärenden Variablen vorhergesagt werden können</p></li>
+<li><p><strong>Fehler und Signigikanz</strong>: werden durch Vertrauensintervalle und statistische Tests beurteilt</p></li>
+<li><p><strong>Modellentwicklung</strong>: ist ein interaktiver Prozess, welche durch die oben genannten Ziele beeinflusst wird</p></li>
+</ul>
+</div>
+</div>
+<div id="methode-der-kleinsten-quadrate-least-squares" class="section level2">
+<h2><span class="header-section-number">2.2</span> Methode der kleinsten Quadrate (Least Squares)</h2>
+<p>Gegeben sei das lineare Modell <span class="math inline">\(y = X\beta + \epsilon\)</span>. Wir wollen eine, gemäss den oben formulierten Zielen, möglichst gute Schätzung für <span class="math inline">\(\beta\)</span> finden. Die folgende Darstellung erklärt, wie die Methode der kleinsten Quadrate funktioniert.</p>
+<p><img src="LsqExplain.pdf" style="display: block; margin: auto;" /></p>
+<p>Die Punkte stehen für die Beobachtungen <span class="math inline">\(y_i\)</span>. Die rote Linie steht für die Regressionsgerade. Die Distanz des Punktes zur Projektion in Richtung der <span class="math inline">\(y\)</span>-Achse auf der Regressionslinie entspricht dem Residuum <span class="math inline">\(r_i = y_i - x_i^T \hat{\beta}\)</span>. Für eine bestimmte Regressionsgerade (rote Linie im Diagramm) wird für jeden Punkt <span class="math inline">\(y_i\)</span> das entsprechende Residuum <span class="math inline">\(r_i\)</span> berechnet. Die Residuen <span class="math inline">\(r_i\)</span> werden quadriert und addiert. Diese summierten Quadrate der Residuen stellt ein Mass dar, wie gut die Regressionsgerade an die Beobachtungspunkte <span class="math inline">\(y_i\)</span> angepasst ist.</p>
+<p>Position und Verlauf der Regressionsgeraden können durch die Wahl des Vektors <span class="math inline">\(\beta\)</span> beeinflusst werden. Gemäss der Methode der kleinsten Quadrate soll <span class="math inline">\(\beta\)</span> so bestimmt werden, dass die Summe der quadrierten Residuen minimal wird. Der so bestimmte Vektor <span class="math inline">\(\beta\)</span> wird dann als Least-Squares-Schätzer bezeichnet. In einer Formel können wir die Berechnung des Least-Squares-Schätzers (<span class="math inline">\(\hat{\beta}\)</span>), wie folgt ausdrücken.</p>
+<span class="math display">\[\begin{equation}\hat{\beta} = argmin_{\beta} \| y - X\beta \| ^2\end{equation}\]</span>
+<p>wobei <span class="math inline">\(\| .\|\)</span> für die Euklidsche Norm oder die Euklidsche Distanz steht. In einem ersten Schritt geht es darum das Minimum für den Ausdruck <span class="math inline">\(\| y - X\beta \| ^2\)</span> zu finden. Dabei ist es einfacher, wenn wir folgende Umformung verwenden.</p>
+<span class="math display">\[\begin{equation}\| y - X\beta \| ^2 = (y - X\beta)^T(y - X\beta) = y^Ty - y^TX\beta - \beta^TX^Ty + \beta^TX^TX\beta\end{equation}\]</span>
+<p>Leiten wir diesen Ausdruck nach <span class="math inline">\(\beta\)</span> ab und setzen die erste Ableitung gleich <span class="math inline">\(0\)</span>, dann erhalten wir eine Gleichung für den Least-Squares-Schätzer <span class="math inline">\(\hat{\beta}\)</span>.</p>
+<span class="math display">\[\begin{equation}-y^TX - y^TX + 2\hat{\beta}^TX^TX = 0\end{equation}\]</span>
+<p>Aus der obigen Formel können wir die sogenannte <strong>Normalgleichung</strong> herleiten. Diese lautet</p>
+<span class="math display">\[\begin{equation}X^TX\hat{\beta} = X^Ty\end{equation}\]</span>
+<p>Unter der Annahme, dass die Matrix <span class="math inline">\(X\)</span> vollen Kolonnenrang <span class="math inline">\(p\)</span> hat, können wir explizit nach <span class="math inline">\(\hat{\beta}\)</span> auflösen.</p>
+<span class="math display">\[\begin{equation}\hat{\beta} = (X^TX)^{-1}X^Ty\end{equation}\]</span>
+<p>Die Residuen <span class="math inline">\(r_i = y_i - x_i^T\hat{\beta}\)</span> sind Schätzungen für die Resteffekte <span class="math inline">\(\epsilon_i\)</span> und können somit für die Schätzung von <span class="math inline">\(\sigma^2\)</span> verwendet werden.</p>
+<span class="math display">\[\begin{equation}\hat{\sigma}^2 = \frac{1}{n-p}\sum_{i=1}^{n} r_i^2\end{equation}\]</span>
+<p>Der Faktor <span class="math inline">\(1/(n-p)\)</span> scheint ungewöhnlich, aber es kann gezeigt werden, dass die Wahl dieses Faktors zur Erwartungstreue von <span class="math inline">\(\hat{\sigma}^2\)</span> führt. Das heisst, es gilt <span class="math inline">\(E\left[ \hat{\sigma}^2 \right] = \sigma^2\)</span>.</p>
+<div id="annahmen-hinter-dem-linearen-modell" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Annahmen hinter dem linearen Modell</h3>
+<p>Abgesehen davon, dass die Matrix <span class="math inline">\(X\)</span> vollen Kolonnenrang <span class="math inline">\(p&lt;n\)</span> haben muss, wurden für die erklärenden Variablen keine Annahmen getroffen. Insbesondere können die erklärenden Variablen kontinuierlich oder diskret sein. Kontinuierliche Variablen sind typischerweise Messgrössen, welche als reelle Zahlen (Gleitkommazahlen) erhoben werden. Diskrete Grössen können nur bestimmte Werte, wie zum Beispiel <span class="math inline">\(0\)</span> oder <span class="math inline">\(1\)</span> annehmen.</p>
+<p>Damit die Anpassung eines linearen Modells mit der Methode der kleinsten Quadrate Sinn macht und die Tests und Vertrauensintervalle gültig sind, müssen wir gewisse Annahmen treffen.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Korrektheit des linearen Modells</strong>: Das heisst <span class="math inline">\(E\left[\epsilon_i \right] = 0\)</span> für alle <span class="math inline">\(i\)</span>. Das heisst aber auch, dass die Zielgrössen und die erklärenden Variablen nicht gemischt werden dürfen.</li>
+<li><strong>Alle <span class="math inline">\(x_i\)</span> sind exakt</strong>: Es wird angenommen, dass die Werte für <span class="math inline">\(x_i\)</span> ohne Fehler beobachtet werden können.</li>
+<li><strong>Konstante Varianz der Resteffekte</strong>: <span class="math inline">\(Var(\epsilon_i) = \sigma^2\)</span> für alle <span class="math inline">\(i\)</span></li>
+<li><strong>Resteffekte sind unkorreliert</strong>: <span class="math inline">\(Cov(\epsilon_i, \epsilon_j) = 0\)</span> für alle <span class="math inline">\(i\ne j\)</span></li>
+<li><strong>Resteffekte folgen Normalverteilung</strong>: Der Vektor <span class="math inline">\(\epsilon\)</span> der Resteffekte folgt einer multivariaten Normalverteilung.</li>
+</ol>
+<p>Falls diese Annahmen verletzt sind, gibt es eine Reihe von Massnahmen, welche getroffen werden können. Bei Verletzung der Annahme 3, können “weighted least squares” Methoden verwendet werden. Ähnlich bei Verletzung der Annahme 4, können wir “generalized least squares” verwenden. Ist die Annahme 5 der Normalverteilung nicht erfüllt, können wir auf sogenannte “robuste Methoden” ausweichen. Falls Annahme 2 nicht zutrifft, braucht es Korrekturen, welche als “errors in variables” bezeichnet wird. Falls die Annahme 1 nicht stimmt, braucht es nicht-lineare Modelle.</p>
+<p>Die folgende Grafik zeigt das Beispiel des sogenannten “Pillen-Knicks”. Dabei werden die Anzahl Geburten seit 1930 in der Schweiz gezeigt. Hier sind die Annahmen 1 und 4 verletzt. Dieses Beispiel zeigt auch die Gefahr bei Vorhersagen in Bereiche, wo keine erklärende Variablen vorliegen.</p>
+<p><img src="PillKink.pdf" style="display: block; margin: auto;" /></p>
+</div>
+<div id="kein-ersatz-der-multiplen-regression-durch-mehrere-einfache-regressionen" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Kein Ersatz der multiplen Regression durch mehrere einfache Regressionen</h3>
+<p>Eine multiple Regression (mit mehreren erklärenden Variablen) soll nicht durch mehrere einfache Regressionen (mit nur einer erklärenden Variablen) ersetzt werden. Das folgende simulierte Beispiel zeigt weshalb.</p>
+<p>Wir betrachten die folgenden erklärenden Variablen <span class="math inline">\(x^{(1)}\)</span> und <span class="math inline">\(x^{(2)}\)</span> und die Zielgrösse <span class="math inline">\(y\)</span> mit folgenden Werten</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">x1</th>
+<th align="right">x2</th>
+<th align="right">y</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">0</td>
+<td align="right">-1</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
+<td align="right">2</td>
+<td align="right">1</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td align="right">3</td>
+<td align="right">2</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">-1</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="right">2</td>
+</tr>
+</tbody>
+</table>
+<p>Die multiple Regression führt zur Lösung der kleinsten Quadrate, welche die Daten exakt beschreibt, so wie diese erzeugt wurden.</p>
+<span class="math display">\[\begin{equation}y_i = \hat{y_i} = 2x_{i1} - x_{i2} \qquad \text{für alle } i \text{ mit } \hat{\sigma}^2 = 0\end{equation}\]</span>
+<p>Wird an die Daten nur eine einfache Regression mit der erklärenden Variablen <span class="math inline">\(x^{(2)}\)</span> und ignoriert <span class="math inline">\(x^{(1)}\)</span>, so erhalten wir das folgende Resultat</p>
+<span class="math display">\[\begin{equation}\hat{y_i} = {1\over 9}x_{i2} + {4\over 3} \qquad \text{für alle } i \text{ mit } \hat{\sigma}^2 = 1.72\end{equation}\]</span>
+<p>Der Grund dafür ist, dass die erklärenden Variablen <span class="math inline">\(x^{(1)}\)</span> und <span class="math inline">\(x^{(2)}\)</span> korreliert sind. Falls <span class="math inline">\(x^{(1)}\)</span> steigt, dann steigt auch <span class="math inline">\(x^{(2)}\)</span>. Da aber in der multiplen Regression <span class="math inline">\(x^{(1)}\)</span> einen grösseren Koeffizienten hat als <span class="math inline">\(x^{(2)}\)</span>, muss dieser Effekt in der einfachen Regression durch <span class="math inline">\(x^{(2)}\)</span> kompensiert werden. Dies führt zur Abweichung zwischen den Resultaten der beiden Analysen.</p>
+</div>
+</div>
+<div id="eigenschaften-der-schatzungen" class="section level2">
+<h2><span class="header-section-number">2.3</span> Eigenschaften der Schätzungen</h2>
+<p>Die Least-Squares-Schätzer sind Zufallsvariablen, da für jeden Datensatz den wir vom gleichen unterliegenden Prozess beobachten, andere Werte resultieren. Damit ändern sich auch die Least-Squares-Schätzer. Da die Schätzer Funktionen der beobachteten Daten sind, haben die Schätzer auch einen zufälligen Charakter. Somit können wir Eigenschaften betreffend den Verteilungen und den Momenten für die Least-Squares-Schätzer herleiten. Die Ergebnisse sind hier nur kurz zusammengefasst.</p>
+<div id="momente-der-least-squares-schatzungen" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> Momente der Least-Squares Schätzungen</h3>
+<p>Wir nehmen das folgende lineare Modell an</p>
+<span class="math display">\[\begin{equation}y = X\beta + \epsilon \text{, } E\left[\epsilon \right] = 0 \text{, } Cov(\epsilon) = E\left[\epsilon\epsilon^T \right] = \sigma^2I_{n\times n}\end{equation}\]</span>
+<p>Zusammen mit den oben getroffenen Annahmen können wir folgende Aussagen machen</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(E\left[\hat{\beta}\right] = \beta\)</span>, das heisst, <span class="math inline">\(\hat{\beta}\)</span> ist unverzerrt</li>
+<li><span class="math inline">\(E\left[\hat{y}\right] = E\left[y\right] = X\beta\)</span>, was aus 1. folgt. Zudem ist, <span class="math inline">\(E\left[r\right] = 0\)</span></li>
+<li><span class="math inline">\(Cov(\hat{\beta}) = \sigma^2(X^TX)^{-1}\)</span></li>
+<li><span class="math inline">\(Cov(\hat{y}) = \sigma^2P\)</span>, <span class="math inline">\(Cov(r) = \sigma^2(I-P)\)</span></li>
+</ol>
+<p>Die Matrix <span class="math inline">\(P\)</span> ist definiert als Projektionsmatrix aus <span class="math inline">\(\hat{y} = Py\)</span>. Setzen wir die Least-Squares-Schätzer ein, dann folgt</p>
+<span class="math display">\[\begin{equation}\hat{y} = X\hat{\beta} = X(X^TX)^{-1}X^Ty = Py\end{equation}\]</span>
+<p>Somit ist die Matrix <span class="math inline">\(P\)</span> definiert als <span class="math inline">\(P=X(X^TX)^{-1}X^T\)</span>.</p>
+</div>
+<div id="verteilung-der-least-squares-schatzer-unter-normalverteilten-fehlern" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> Verteilung der Least-Squares-Schätzer unter normalverteilten Fehlern</h3>
+<p>Zusätzlich zum linearen Modell nehmen wir an, dass <span class="math inline">\(\epsilon_i, \ldots, \epsilon_n \text{ i.i.d. } \mathcal{N}(0,\sigma^2)\)</span>, dann können wir zeigen, dass</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\hat{\beta} \sim \mathcal{N}_p\left(\beta, \sigma^2(X^TX)^{-1}\right)\)</span></li>
+<li><span class="math inline">\(\hat{y} \sim \mathcal{N}_n\left(X\beta,\sigma^2P \right)\)</span>, <span class="math inline">\(r \sim \mathcal{N}_n\left(0,\sigma^2(I-P) \right)\)</span></li>
+<li><span class="math inline">\(\hat{\sigma}^2 \sim \frac{n}{n-p}\chi_{n-p}^2\)</span></li>
+</ol>
+<p>Die Annahme der Normalverteilung ist oft (annähernd) erfüllt und kann durch den zentralen Grenzwertsatz bei grösseren Datensätzen begründet werden. Diese Eigenschaften im Bezug auf die Verteilung der Schätzer führt zur Herleitung von Vertrauensintervallen und statistischen Tests für die geschätzten Parameter. Sind die Annahmen der Normalverteilung nicht erfüllt, müssen wir auf sogenannte robuste Methoden ausweichen. Diese werden hier nicht behandelt.</p>
+</div>
+</div>
+<div id="tests-und-vertrauensintervalle" class="section level2">
+<h2><span class="header-section-number">2.4</span> Tests und Vertrauensintervalle</h2>
+<div id="einzeltests" class="section level3">
+<h3><span class="header-section-number">2.4.1</span> Einzeltests</h3>
+<p>Wir nehmen an, dass das lineare Modell korrekt ist und dass die Resteffekte <span class="math inline">\(\epsilon_1, \ldots, \epsilon_n \text{ i.i.d. } \sim \mathcal{N}\left(0, \sigma^2 \right)\)</span>. Dann haben wir gesehen gemäss den Eigenschaften aus dem vorherigen Abschnitt ist dann <span class="math inline">\(\hat{\beta}\)</span> normalverteilt.</p>
+<p>Im Allgemeinen sind wir daran interessiert, ob ein bestimmter Parameter <span class="math inline">\(\beta_j\)</span> einen Einfluss hat. Dies lässt sich mit der Nullhypothese <span class="math inline">\(H_{0,j}: \beta_j = 0\)</span> gegenüber der Alternativen <span class="math inline">\(H_{A,j}: \beta_j \ne 0\)</span> überprüfen. Da <span class="math inline">\(\hat{\beta}\)</span> einer Normalverteilung folgt, können wir herleiten, dass unter der Nullhypothese <span class="math inline">\(H_{0,j}\)</span> gilt</p>
+<span class="math display">\[\begin{equation}\frac{\hat{\beta_j}}{\sqrt{\sigma^2(X^TX)_{jj}^{-1}}} \sim \mathcal{N}(0,1)\end{equation}\]</span>
+<p>Da <span class="math inline">\(\sigma^2\)</span> unbekannt ist, ist die obige Teststatistk in der Praxis nicht brauchbar. Ersetzen wir <span class="math inline">\(\sigma^2\)</span> durch den Schätzwert <span class="math inline">\(\hat{\sigma}^2\)</span> so erhalten wir die sogenannte t-Teststatistik.</p>
+<span class="math display">\[\begin{equation}T_j = \frac{\hat{\beta_j}}{\sqrt{\hat{\sigma}^2(X^TX)_{jj}^{-1}}} \sim t_{n-p}\end{equation}\]</span>
+<p>Anhand dieses Tests können wir die Relevanz der erklärenden Variablen quantifizieren, indem wir die Teststatistiken <span class="math inline">\(T_j\)</span> für <span class="math inline">\(j=1,\ldots,p\)</span> analysieren. Die Beurteilung der Relevanz der erklärenden Variablen aufgrund dieser einzelnen t-Tests birgt zwei Probleme.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Multiples Testen</strong>: Werden sehr viele Tests durchgeführt, dann sind bei einem angenommenen Signifikanz-Niveau von <span class="math inline">\(\alpha\)</span> automatisch ein Anteil <span class="math inline">\(\alpha\)</span> aller Tests signifikant. Werden beispielsweise <span class="math inline">\(100\)</span> Tests auf dem Niveau <span class="math inline">\(\alpha = 0.05\)</span> durchgeführt, dann sind automatisch <span class="math inline">\(5\)</span> Tests signifikant.</li>
+<li><strong>Korrelation der erklärenden Variablen</strong>: Falls die erklärenden Variablen untereinander korreliert sind, dann beeinflusst dies auch die Testergebnisse und kann diese verzerren.</li>
+</ol>
+</div>
+<div id="globaler-test" class="section level3">
+<h3><span class="header-section-number">2.4.2</span> Globaler Test</h3>
+<p>Wenn wir testen wollen, ob (abgesehen vom Achsenabschnitt) überhaupt eine erklärende Variable einen Einfluss auf die Zielgrösse hat, dann können wir diese mit folgender Nullhypothese <span class="math inline">\(H_0: \beta_2 = \ldots = \beta_p = 0\)</span> versus die Alternative <span class="math inline">\(H_A: \beta_j \ne 0\)</span> für <span class="math inline">\(j=2,\ldots, p\)</span> tun. Solch ein Test kann mit der Zerlegung der Varianz der Beobachtungen <span class="math inline">\(y_i\)</span> um das globale Mittel <span class="math inline">\(\bar{y} = n^{-1}\sum_{i=1}^ny_i\)</span> konstruiert werden. In Vektor-Schreibweise sieht diese Zerlegung wie folgt aus</p>
+<span class="math display">\[\begin{equation}\|y - \bar{y}\|^2 = \|\hat{y} - \bar{y}\|^2 + \|y - \hat{y}\|^2\end{equation}\]</span>
+<p>Diese Zerlegung teilt die quadrierten Abweichungen der Beobachtungen <span class="math inline">\(y\)</span> vom allgemeinen Mittel <span class="math inline">\(\bar{y}\)</span> in die quadrierten Abweichungen der gefitteten Werte <span class="math inline">\(\hat{y}\)</span> vom allgemeinen Mittel plus die quadrierten Residuen <span class="math inline">\(y-\hat{y}\)</span> auf. Eine solche Zerlegung lässt sich am einfachsten in einer Varianzanalysetabelle zusammenfassen.</p>
+
+<p>Im Falle der globalen Nullhypothese haben die erklärenden Variablen keinen Einfluss auf die Zielgrösse. Somit ist <span class="math inline">\(E\left[y \right] = const. = E\left[\bar{y}\right]\)</span>. Daraus folgt, dass der Erwartungswert der mittleren Summenquadrate der Regression gleich <span class="math inline">\(\sigma^2\)</span> ist. Teilen wir die mittleren Summenquadrate der Regression durch die mittleren Summenquadrate des Rests (Schätzung von <span class="math inline">\(\sigma^2\)</span>) erhalten wir eine dimensionslose Grösse, welcher einer <span class="math inline">\(F\)</span>-Statistik entspricht. Unter der Nullhypothese gilt, dass</p>
+<span class="math display">\[\begin{equation}F = \frac{\|\hat{y} - \bar{y}\|^2/(p-1)}{\|y - \hat{y}\|^2/(n-p)} = F_{p-1,n-p}\end{equation}\]</span>
+<p>Dies wird als globaler <span class="math inline">\(F\)</span>-Test der Regression bezeichnet.</p>
+<p>Abgesehen von der Bewertung der statistischen Signifikanz mit dem globalen <span class="math inline">\(F\)</span>-Test, sind wir auch daran interessiert, wie gut die Anpassung des Modells an die Daten ist. Eine mögliche Grösse für die Qualität der Anpassung ist das sogenannten <span class="math inline">\(R^2\)</span>. Dies ist definiert als das folgende Verhältnis.</p>
+<span class="math display">\[\begin{equation}R^2 = \frac{\|\hat{y} - \bar{y}\|^2}{\|y - \bar{y}\|^2}\end{equation}\]</span>
+<p>Das <span class="math inline">\(R^2\)</span> entspricht dem Verhältnis der Variation der Beobachtungen um das globale Mittel, welcher durch die Regression erklärt werden kann. Aus dieser Definition ist klar, dass wir nach Modellen suchen mit einem möglichst grossen <span class="math inline">\(R^2\)</span>.</p>
+</div>
+<div id="vertrauensintervalle" class="section level3">
+<h3><span class="header-section-number">2.4.3</span> Vertrauensintervalle</h3>
+<p>In Anlehnung an den <span class="math inline">\(t\)</span>-Test der einzelnen Parameter <span class="math inline">\(\beta_j\)</span> können wir Vertrauensintervalle ableiten. Das zwei-seitige Vertraunensintervall auf dem Niveau <span class="math inline">\(1-\alpha\)</span> für <span class="math inline">\(\beta_j\)</span> ist definiert als</p>
+<span class="math display">\[\begin{equation}\hat{\beta}_j \pm \sqrt{\hat{\sigma}^2(X^TX)_{jj}^{-1}} \ \cdot t_{n-p;1-\alpha/2}\end{equation}\]</span>
+<p>Hier <span class="math inline">\(t_{n-p;1-\alpha/2}\)</span> ist das <span class="math inline">\(1-\alpha/2\)</span>-Quantil der <span class="math inline">\(t_{n-p}\)</span>-Verteilung.</p>
+</div>
+</div>
+<div id="output-von-r" class="section level2">
+<h2><span class="header-section-number">2.5</span> Output von R</h2>
+<p>In R wird eine lineare Regression mit der Funktion <code>lm()</code> angepasst. Die Zusammenfassung der Resultate von <code>lm()</code> ist in der nachfolgenden Diagramm gezeigt.</p>
+<p><img src="LinModResults" style="display: block; margin: auto;" /></p>
+<p>Die verschiedenen Bereiche der Resultate sind numeriert durch farbige Rechtecke gekennzeichnet. Im ersten Bereich ist unter der Überschrift <code>Call</code> der Funktionsaufruf nochmals aufgeführt. So ist dokumentiert, wie die nachfolgenden Resultate zustande kamen. Der zweite Bereich gibt einige Informationen zur empirischen Verteilung der Residuen. Diese Kennzahlen der Residuen-Verteilung sind nützlich um gewisse Annahmen bezüglich der Residuen im Modell grob überprüfen zu können. Block drei enthält die Resultate der Parameterschätzungen. Abgesehen von den Schätzwerten sind auch die Standardfehler und die Quantile des entsprechenden t-Tests für jeden Parameter enthalten. Die Kolonne ganz links im Block drei zeigt das Signifikanz-Niveau der t-Tests für jeden Parameterschätzwert. Der vierte und letzte Block enthält die Schätzung der Rest-Standardabweichung (residual standard error) und das Testergebnis des globalen F-Tests. Zur Beurteilung der Anpassungsqualität ist das <span class="math inline">\(R^2\)</span> und eine korrigierte Version des <span class="math inline">\(R^2\)</span> aufgeführt. Die korrigierte Version des <span class="math inline">\(R^2\)</span> berücksichtigt die Anzahl der geschätzten Parameter und ist definiert als</p>
+<span class="math display">\[\begin{equation}\bar{R}^2 = R^2 - (1-R^2)\frac{p-1}{n-p}\end{equation}\]</span>
+</div>
+<div id="analyse-der-residuen-und-uberprufung-der-modellannahmen" class="section level2">
+<h2><span class="header-section-number">2.6</span> Analyse der Residuen und Überprüfung der Modellannahmen</h2>
+<p>Die Residuen <span class="math inline">\(r_i = y_i - \hat{y}_i\)</span> dienen als Annäherungen an die unbekannten Resteffekte <span class="math inline">\(\epsilon_i\)</span> und zur Überprüfung der Modellannahmen.</p>
+<div id="tukey-anscombe-plot" class="section level3">
+<h3><span class="header-section-number">2.6.1</span> Tukey-Anscombe Plot</h3>
+<p>Der Tukey-Anscombe Plot ist ein graphisches Tool zur Feststellung von Abhängigkeiten zwischen den Residuen <span class="math inline">\(r_i\)</span> und den gefitteten Werten <span class="math inline">\(\hat{y}_i\)</span>. Im Tukey-Anscombe Plot werden auf der x-Achse die gefitteten Werte und auf der y-Achse die Resiuden aufgetragen. Idealerweise sind die Resiuden zufällig verteilt und zeigen kein Muster. In R erzeugt man den Tukey-Anscombe Plot über die Hilfsfunktionen <code>fitted()</code> und <code>residuals()</code>. Die Ergebnisse der beiden Funktionen werden einfach an die <code>plot()</code>-Funktion übergeben.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(<span class="st">&quot;anscombe&quot;</span>)
+fit.lm.ta &lt;-<span class="st"> </span><span class="kw">lm</span>(y1 ~<span class="st"> </span>., <span class="dt">data =</span> anscombe)
+<span class="kw">plot</span>(<span class="kw">fitted</span>(fit.lm.ta), <span class="kw">residuals</span>(fit.lm.ta))</code></pre></div>
+<p><img src="bookdown-asmas_files/figure-html/TukeyAnscombe-1.png" width="672" /></p>
+<p>Der obige Plot zeigt eine ideale Situation, wo keine systematischen Muster zu erkennen sind. Die folgenden vier Plots sind <span class="citation">(Bühlmann and Mächler <a href="#ref-BM2014">2014</a>)</span> entnommen und zeigen Probleme bei der Anpassung von linearen Modellen auf.</p>
+<p><img src="TukeyAnscombProblem" style="display: block; margin: auto;" /></p>
+</div>
+<div id="der-qq-plot" class="section level3">
+<h3><span class="header-section-number">2.6.2</span> Der QQ-Plot</h3>
+<p>Annahmen zur Verteilung der zufälligen Grössen im linearen Modell können mit dem sogenannten QQ-Plot überprüft werden. Die Abkürzung “QQ” steht hier für Quantil-Quantil und meint, dass wir die empirischen Quantile den theoretischen Quantilen einer bestimmten Verteilung gegenüberstellen. Im Fall, dass wir gegen die theoretischen Quantile einer Normalverteilung testen, heisst der QQ-Plot auch Normal Plot.</p>
+<p>In R können wir den QQ-Plot für die Residuen, wie folgt erzeugen.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qqnorm</span>(<span class="kw">residuals</span>(fit.lm.ta))
+<span class="kw">qqline</span>(<span class="kw">residuals</span>(fit.lm.ta))</code></pre></div>
+<p><img src="bookdown-asmas_files/figure-html/QQPlot-1.png" width="672" /></p>
+<p>Stimmen die Quantile der empirische Verteilung der Residuen gut mit den theoretischen Quantilen überein, dann liegen die Punkte im QQ-Plot auf einer Geraden. Falls die empirische Verteilung bedeutende Abweichungen zeigt von der angenommenen Verteilung, so zeigt der Verlauf der Punkte systematische Abweichungen, wie das in den folgenden Graphiken der Fall ist.</p>
+<p><img src="QQPlotProblems" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="selektion-eines-modells" class="section level2">
+<h2><span class="header-section-number">2.7</span> Selektion eines Modells</h2>
+<p>Gegeben sei das lineare Modell</p>
+<span class="math display">\[\begin{equation}y_i = \sum_{i=1}^n \beta_j x_{ij} + \epsilon_i \quad (i = 1,\ldots,n)\end{equation}\]</span>
+<p>mit <span class="math inline">\(\epsilon_1,\ldots,\epsilon_n \text{ i.i.d. }\)</span>, <span class="math inline">\(E\left[\epsilon_i \right] = 0\)</span> und <span class="math inline">\(Var(\epsilon_i) = \sigma^2\)</span>.</p>
+<p>Bis anhin hatten wir immer alle erklärenden Variablen <span class="math inline">\(x_1,\ldots,x_p\)</span> im Modell berücksichtigt. Wir können uns aber auch fragen, ob dies Sinn macht, wenn gewisse erklärende Variablen nicht relevant sind für die Modellierung der Zielgrössen. Hinzu kommt noch, dass für jede erklärende Variablen ein unbekannter Parameter <span class="math inline">\(\beta_j\)</span> geschätzt werden muss. Jeder geschätzte Parameter trägt zur Variabilität der gefitteten Werte bei, ob die erklärende Variable relevant ist oder nicht. Somit wird oft nach dem <strong>optimalen</strong> Modell und nicht nach dem wahren Modell gesucht. Das optimale Modell ist definiert als das Modell mit dem minimalen Subset an erklärenden Variablen, welche alle relevant sind für die Modellierung der Zielgrösse.</p>
+<p>Formell können wir das soeben Erklärte wie folgt zusammenfassen. Angenommen, wir wollen die folgende Vorhersage, nennen wir sie <span class="math inline">\(\mathcal{M}\)</span>, optimieren.</p>
+<span class="math display">\[\begin{equation}\sum_{r=1}^q \hat{\beta}_{j_r}x_{ij_r}\end{equation}\]</span>
+<p>welche die <span class="math inline">\(q\)</span> erklärenden Variablen mit den Indices <span class="math inline">\(j_1,\ldots,j_q \in \{1,\ldots,p\}\)</span> enthält. Wir brauchen ein Entscheidungskriterium um die Vorhersage <span class="math inline">\(\mathcal{M}\)</span> mit den <span class="math inline">\(q\)</span> Parametern mit dem vollen Modell, welches alle erklärenden Variablen enthält vergleichen zu können.</p>
+<div id="mallows-c_p-statistik" class="section level3">
+<h3><span class="header-section-number">2.7.1</span> Mallows <span class="math inline">\(C_p\)</span>-Statistik</h3>
+<p>Die Summenquadrate der Residuen <span class="math inline">\(SSE(\mathcal{M})\)</span> für die Vorhersage <span class="math inline">\(\mathcal{M}\)</span> können wir nicht als Kriterium verwenden, denn <span class="math inline">\(SSE(\mathcal{M})\)</span> nimmt ab mit zunehmener Anzahl <span class="math inline">\(q\)</span> an Parametern. Der mittlere quadrierte Fehler bei der Verwendung von <span class="math inline">\(\mathcal{M}\)</span> anstelle vom vollen Modell, kann als</p>
+<span class="math display">\[\begin{equation}n^{-1} SSE(\mathcal{M}) - \hat{\sigma}^2 + 2\hat{\sigma}^2q/n\end{equation}\]</span>
+<p>geschätzt werden, wobei <span class="math inline">\(\hat{\sigma}^2\)</span> der geschätzte Restvarianz aus dem vollen Modell entspricht. Da <span class="math inline">\(n\)</span> und <span class="math inline">\(\hat{\sigma}^2\)</span> für alle Submodelle <span class="math inline">\(\mathcal{M}\)</span> konstant sind, können wir als Kriterium für den Modellvergleich die Statistik</p>
+<span class="math display">\[\begin{equation}C_p(\mathcal{M}) = \frac{SSE(\mathcal{M})}{\hat{\sigma}^2} - n + 2q\end{equation}\]</span>
+<p>verwenden.</p>
+</div>
+<div id="modellwahl-mit-dem-c_p-kriterium" class="section level3">
+<h3><span class="header-section-number">2.7.2</span> Modellwahl mit dem <span class="math inline">\(C_p\)</span>-Kriterium</h3>
+<p>Für das volle Modell mit <span class="math inline">\(p\)</span> erklärenden Variablen gibt es <span class="math inline">\(2^p-1\)</span> Submodelle oder Vorhersagen <span class="math inline">\(\mathcal{M}\)</span>. Somit ist ein Vergleich der <span class="math inline">\(C_p\)</span>-Statistik aller Submodelle nur machbar, wenn <span class="math inline">\(p\)</span> nicht zu gross, d.h. kleiner als <span class="math inline">\(16\)</span> ist. Für <span class="math inline">\(p \ge 16\)</span> werden die folgenden zwei schrittweisen Algorithmen vorgeschlagen.</p>
+<div id="vorwarts-integration-forward-selection-1.-starte-mit-dem-minimalen-modell-mathcalm_0-welches-nur-ein-globales-mittel-enthalt-2.-wahle-die-erklarende-variable-welche-die-summe-der-quadrierten-residuen-am-meisten-reduziert-und-nimm-diese-ins-modell-auf-3.-wiederhole-schritt-2-bis-alle-erklarenden-variablen-im-modell-aufgenommen-wurden.-das-produziert-eine-sequenz-von-submodellen-mathcalm_0-mathcalm_1-mathcalm_2-ldots.-4.-wahle-aus-der-sequenz-der-submodelle-dasjenige-mit-dem-kleinsten-wert-der-c_p-statistik" class="section level4">
+<h4><span class="header-section-number">2.7.2.1</span> Vorwärts-Integration (“Forward Selection) 1. Starte mit dem minimalen Modell <span class="math inline">\(\mathcal{M}_0\)</span>, welches nur ein globales Mittel enthält 2. Wähle die erklärende Variable, welche die Summe der quadrierten Residuen am meisten reduziert und nimm diese ins Modell auf 3. Wiederhole Schritt 2 bis alle erklärenden Variablen im Modell aufgenommen wurden. Das produziert eine Sequenz von Submodellen <span class="math inline">\(\mathcal{M}_0, \mathcal{M}_1, \mathcal{M}_2, \ldots\)</span>. 4. Wähle aus der Sequenz der Submodelle dasjenige mit dem kleinsten Wert der <span class="math inline">\(C_p\)</span>-Statistik</h4>
+</div>
+<div id="ruckwarts-elimination-backward-selection" class="section level4">
+<h4><span class="header-section-number">2.7.2.2</span> Rückwärts-Elimination (Backward Selection)</h4>
+<ol style="list-style-type: decimal">
+<li>Wir starten mit dem vollen Modell, welches alle erklärenden Variablen enthält</li>
+<li>Entferne die erklärende Variable vom vollen Modell, welche die Summe der quadrierten Residuen am wenigsten reduziert.</li>
+<li>Wiederhole Schritt 2 bis alle erklärenden Variablen entfernt wurden. Das führt zu einer Sequenz von Submodellen.</li>
+<li>Wähle dasjenige Submodell aus der Sequenz an Submodellen mit minimaler <span class="math inline">\(C_p\)</span>-Statistik</li>
+</ol>
+</div>
+</div>
+<div id="bemerkungen" class="section level3">
+<h3><span class="header-section-number">2.7.3</span> Bemerkungen</h3>
+<p>Rückwärts-Elimination von erklärenden Variablen funktioniert im allgemeinen besser als Vorwärts-Integration, aber ist auch teuerer im Bezug auf Rechenleistung. In <span class="citation">(Bühlmann and Mächler <a href="#ref-BM2014">2014</a>)</span> wird die Vorwärts-Integration für den Fall dass <span class="math inline">\(p \ge n\)</span> als taugliche Methode bezeichnet. Erfahrungen im Bereich der Effektschätzung in der genomischen Selektion haben aber gezeigt, dass Vorwärts-Integration zu keiner stabilen Prozedur für die Selektion eines guten Modells führt.</p>
+<p>Schon die Autoren in <span class="citation">(Meuwissen, Hayes, and Goddard <a href="#ref-MHG2001">2001</a>)</span> haben für simulierte Daten gezeigt, dass die Vorwärts-Integration von SNP-Effekten als erklärende Variablen bei der Identifikation der wichtigen SNP-Effekte versagte. Offenbar gibt es bie einer sehr grossen Anzahl von erklärenden Variablen <span class="math inline">\(p\)</span> im Vergleich zur Anzahl der verfügbaren Beobachtungen <span class="math inline">\(n\)</span> das Problem, dass im Schritt 2 der Vorwärts-Integration viele erklärende Variablen die Summe der quadrierten Residuen um mehr oder weniger den gleich Betrag reduzieren. Dann haben wir das Problem, dass wir eine Auswahl zwischen fast gleichwertigen erklärenden Variablen treffen müssen. Diese Auswahl ist offensichtlich kritisch und kann zu sehr verschiedenen Endergebnissen in der Modellwahl führen.</p>
+
+<!-- ------------------------------------------------------------------- --
+  -- END of document:  Below this must not be anything, except the stuff --
+  -- concerning the table of abbreviations                               -->
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-BM2014">
+<p>Bühlmann, Peter, and Martin Mächler. 2014. “Computational Statistics.”</p>
+</div>
+<div id="ref-MHG2001">
+<p>Meuwissen, Theo HE, Ben J Hayes, and Mike E Goddard. 2001. “Prediction of Total Genetic Value Using Genome-Wide Dense Marker Maps.” <em>Genetics</em>, no. 157: 1819–29.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="abkurzungen.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-linreg.Rmd",
+"text": "Edit"
+},
+"download": ["bookdown-asmas.pdf", "bookdown-asmas.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
