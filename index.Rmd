@@ -83,8 +83,7 @@ Thema[which(Datum == format(as.Date("2017/02/20"), "%d.%m"))] <- paste0("Einfüh
 Thema[which(Datum == format(as.Date("2017/02/27"), "%d.%m"))] <- paste0("Lineare Regression ([slides](", sBaseUrl,"w2/asmas_w2_v2.pdf))")
 Thema[which(Datum == format(as.Date("2017/03/06"), "%d.%m"))] <- paste0("Lineare Regression II ([slides](", sBaseUrl,"w3/asmas_w3_v3.pdf))([notes](", 
                                                                         sBaseUrl, "w3/bookdown-asmas_ch2.pdf))")
-Thema[which(Datum == format(as.Date("2017/03/13"), "%d.%m"))] <- paste0("GBLUP ([slides](", sBaseUrl,"w4/asmas_w4_v4.pdf))([paper](", 
-                                                                        sBaseUrl, "w4/2013_CW_GBLUP.pdf))")
+Thema[which(Datum == format(as.Date("2017/03/13"), "%d.%m"))] <- paste0("GBLUP ([slides](",sBaseUrl,"w4/asmas_w4_v4.pdf))([paper](",sBaseUrl, "w4/2013_CW_GBLUP.pdf))")
 
 ### # create the table
 dfSlideTable <- data.frame(Woche, Datum, Thema, Wer, stringsAsFactors = FALSE)
