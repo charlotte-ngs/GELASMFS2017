@@ -109,6 +109,7 @@ sBaseUrl <- "https://charlotte-ngs.github.io/GELASMFS2017/"
 Thema[which(Datum == format(as.Date("2017/02/27"), "%d.%m"))] <- paste0("[Einführung](", sBaseUrl,"w2/asmas_w2_u1.pdf)")
 Thema[which(Datum == format(as.Date("2017/03/06"), "%d.%m"))] <- paste0("[Deregression](", sBaseUrl,"w3/asmas_w3_u2.pdf)")
 Thema[which(Datum == format(as.Date("2017/03/13"), "%d.%m"))] <- paste0("[Lineare Regression](", sBaseUrl,"w4/asmas_w4_u3.pdf)")
+Thema[which(Datum == format(as.Date("2017/03/20"), "%d.%m"))] <- paste0("[Single Marker Regression](", sBaseUrl,"w5/asmas_w5_u4.pdf)")
 ### # Table
 dfExTable <- data.frame(Woche, Datum, Thema, Wer, stringsAsFactors = FALSE)
 knitr::kable(dfExTable)
@@ -132,6 +133,7 @@ Wer[2:6] <- "PvR"
 sBaseUrl <- "https://charlotte-ngs.github.io/GELASMFS2017/"
 Thema[which(Datum == format(as.Date("2017/03/06"), "%d.%m"))] <- paste0("[Einführung](", sBaseUrl,"w2/asmas_w2_l1.pdf)")
 Thema[which(Datum == format(as.Date("2017/03/13"), "%d.%m"))] <- paste0("[Deregression](", sBaseUrl,"w3/asmas_w3_l2.pdf)")
+Thema[which(Datum == format(as.Date("2017/03/13"), "%d.%m"))] <- paste0("[Lineare Regression](", sBaseUrl,"w4/asmas_w4_l3.pdf)")
 ### # Table
 dSolStart <- data.frame(Woche, Datum, Thema, Wer, stringsAsFactors = FALSE)
 knitr::kable(dSolStart)
