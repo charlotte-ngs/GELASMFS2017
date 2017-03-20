@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Angewandte Statistische Methoden in den Nutztierwissenschaften</title>
+  <meta name="description" content="Unterlagen zur Vorlesung Angewandte Statistische Methoden in den Nutztierwissenschaften.">
+  <meta name="generator" content="bookdown 0.3.9 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Angewandte Statistische Methoden in den Nutztierwissenschaften" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Unterlagen zur Vorlesung Angewandte Statistische Methoden in den Nutztierwissenschaften." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Angewandte Statistische Methoden in den Nutztierwissenschaften" />
+  
+  <meta name="twitter:description" content="Unterlagen zur Vorlesung Angewandte Statistische Methoden in den Nutztierwissenschaften." />
+  
+
+<meta name="author" content="Peter von Rohr">
+
+
+<meta name="date" content="2017-03-20">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="gblup.html">
+<link rel="next" href="abkurzungen.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Angewandte Statistische Methoden</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Vorwort</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#motivation"><i class="fa fa-check"></i>Motivation</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#einordnung"><i class="fa fa-check"></i>Einordnung</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#lernziele"><i class="fa fa-check"></i>Lernziele</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Einführung</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#problem"><i class="fa fa-check"></i><b>1.1</b> Beschreibung des Problems</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#background"><i class="fa fa-check"></i><b>1.2</b> Rückblick</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#paradigmenwechsel"><i class="fa fa-check"></i><b>1.2.1</b> Paradigmenwechsel</a></li>
+<li class="chapter" data-level="1.2.2" data-path="intro.html"><a href="intro.html#vor-der-genomischen-selektion"><i class="fa fa-check"></i><b>1.2.2</b> Vor der genomischen Selektion</a></li>
+<li class="chapter" data-level="1.2.3" data-path="intro.html"><a href="intro.html#modellierung-vor-der-genomischen-selektion"><i class="fa fa-check"></i><b>1.2.3</b> Modellierung vor der genomischen Selektion</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#gensel"><i class="fa fa-check"></i><b>1.3</b> Genomische Selektion</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="intro.html"><a href="intro.html#modellierung"><i class="fa fa-check"></i><b>1.3.1</b> Modellierung</a></li>
+<li class="chapter" data-level="1.3.2" data-path="intro.html"><a href="intro.html#zwei-schritt-verfahren"><i class="fa fa-check"></i><b>1.3.2</b> Zwei-Schritt-Verfahren</a></li>
+<li class="chapter" data-level="1.3.3" data-path="intro.html"><a href="intro.html#eigenschaften-von-blup-zuchtwerten"><i class="fa fa-check"></i><b>1.3.3</b> Eigenschaften von BLUP-Zuchtwerten</a></li>
+<li class="chapter" data-level="1.3.4" data-path="intro.html"><a href="intro.html#einsatz-von-blup-zuchtwerten-in-der-genomischen-selektion"><i class="fa fa-check"></i><b>1.3.4</b> Einsatz von BLUP-Zuchtwerten in der genomischen Selektion</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#zusammenfassung"><i class="fa fa-check"></i><b>1.4</b> Zusammenfassung</a></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#ausblick"><i class="fa fa-check"></i><b>1.5</b> Ausblick</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>2</b> Multiple Lineare Regression</a><ul>
+<li class="chapter" data-level="2.1" data-path="linreg.html"><a href="linreg.html#beispiele-fur-lineare-regressionen"><i class="fa fa-check"></i><b>2.1</b> Beispiele für Lineare Regressionen</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="linreg.html"><a href="linreg.html#regression-mit-achsenabschnitt"><i class="fa fa-check"></i><b>2.1.1</b> Regression mit Achsenabschnitt</a></li>
+<li class="chapter" data-level="2.1.2" data-path="linreg.html"><a href="linreg.html#regression-durch-den-ursprung"><i class="fa fa-check"></i><b>2.1.2</b> Regression durch den Ursprung</a></li>
+<li class="chapter" data-level="2.1.3" data-path="linreg.html"><a href="linreg.html#regression-mit-transformierten-variablen"><i class="fa fa-check"></i><b>2.1.3</b> Regression mit transformierten Variablen</a></li>
+<li class="chapter" data-level="2.1.4" data-path="linreg.html"><a href="linreg.html#anwendungen-in-den-nutztierwissenschaften"><i class="fa fa-check"></i><b>2.1.4</b> Anwendungen in den Nutztierwissenschaften</a></li>
+<li class="chapter" data-level="2.1.5" data-path="linreg.html"><a href="linreg.html#ziele-der-linearen-regression"><i class="fa fa-check"></i><b>2.1.5</b> Ziele der linearen Regression</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="linreg.html"><a href="linreg.html#methode-der-kleinsten-quadrate-least-squares"><i class="fa fa-check"></i><b>2.2</b> Methode der kleinsten Quadrate (Least Squares)</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="linreg.html"><a href="linreg.html#annahmen-hinter-dem-linearen-modell"><i class="fa fa-check"></i><b>2.2.1</b> Annahmen hinter dem linearen Modell</a></li>
+<li class="chapter" data-level="2.2.2" data-path="linreg.html"><a href="linreg.html#kein-ersatz-der-multiplen-regression-durch-mehrere-einfache-regressionen"><i class="fa fa-check"></i><b>2.2.2</b> Kein Ersatz der multiplen Regression durch mehrere einfache Regressionen</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="linreg.html"><a href="linreg.html#eigenschaften-der-schatzungen"><i class="fa fa-check"></i><b>2.3</b> Eigenschaften der Schätzungen</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="linreg.html"><a href="linreg.html#momente-der-least-squares-schatzungen"><i class="fa fa-check"></i><b>2.3.1</b> Momente der Least-Squares Schätzungen</a></li>
+<li class="chapter" data-level="2.3.2" data-path="linreg.html"><a href="linreg.html#verteilung-der-least-squares-schatzer-unter-normalverteilten-fehlern"><i class="fa fa-check"></i><b>2.3.2</b> Verteilung der Least-Squares-Schätzer unter normalverteilten Fehlern</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="linreg.html"><a href="linreg.html#tests-und-vertrauensintervalle"><i class="fa fa-check"></i><b>2.4</b> Tests und Vertrauensintervalle</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="linreg.html"><a href="linreg.html#einzeltests"><i class="fa fa-check"></i><b>2.4.1</b> Einzeltests</a></li>
+<li class="chapter" data-level="2.4.2" data-path="linreg.html"><a href="linreg.html#globaler-test"><i class="fa fa-check"></i><b>2.4.2</b> Globaler Test</a></li>
+<li class="chapter" data-level="2.4.3" data-path="linreg.html"><a href="linreg.html#vertrauensintervalle"><i class="fa fa-check"></i><b>2.4.3</b> Vertrauensintervalle</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="linreg.html"><a href="linreg.html#output-von-r"><i class="fa fa-check"></i><b>2.5</b> Output von R</a></li>
+<li class="chapter" data-level="2.6" data-path="linreg.html"><a href="linreg.html#analyse-der-residuen-und-uberprufung-der-modellannahmen"><i class="fa fa-check"></i><b>2.6</b> Analyse der Residuen und Überprüfung der Modellannahmen</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="linreg.html"><a href="linreg.html#tukey-anscombe-plot"><i class="fa fa-check"></i><b>2.6.1</b> Tukey-Anscombe Plot</a></li>
+<li class="chapter" data-level="2.6.2" data-path="linreg.html"><a href="linreg.html#der-qq-plot"><i class="fa fa-check"></i><b>2.6.2</b> Der QQ-Plot</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="linreg.html"><a href="linreg.html#selektion-eines-modells"><i class="fa fa-check"></i><b>2.7</b> Selektion eines Modells</a><ul>
+<li class="chapter" data-level="2.7.1" data-path="linreg.html"><a href="linreg.html#mallows-c_p-statistik"><i class="fa fa-check"></i><b>2.7.1</b> Mallows <span class="math inline">\(C_p\)</span>-Statistik</a></li>
+<li class="chapter" data-level="2.7.2" data-path="linreg.html"><a href="linreg.html#modellwahl-mit-dem-c_p-kriterium"><i class="fa fa-check"></i><b>2.7.2</b> Modellwahl mit dem <span class="math inline">\(C_p\)</span>-Kriterium</a></li>
+<li class="chapter" data-level="2.7.3" data-path="linreg.html"><a href="linreg.html#bemerkungen"><i class="fa fa-check"></i><b>2.7.3</b> Bemerkungen</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="gblup.html"><a href="gblup.html"><i class="fa fa-check"></i><b>3</b> Genomic Best Linear Unbiased Prediction</a></li>
+<li class="chapter" data-level="4" data-path="chpt-lasso.html"><a href="chpt-lasso.html"><i class="fa fa-check"></i><b>4</b> Least Absolute Shrinkage And Selection Operator (LASSO)</a><ul>
+<li class="chapter" data-level="4.1" data-path="chpt-lasso.html"><a href="chpt-lasso.html#stochastische-restkomponente"><i class="fa fa-check"></i><b>4.1</b> Stochastische Restkomponente</a></li>
+<li class="chapter" data-level="4.2" data-path="chpt-lasso.html"><a href="chpt-lasso.html#parameterschatzung"><i class="fa fa-check"></i><b>4.2</b> Parameterschätzung</a></li>
+<li class="chapter" data-level="4.3" data-path="chpt-lasso.html"><a href="chpt-lasso.html#alternativen-zu-least-squares"><i class="fa fa-check"></i><b>4.3</b> Alternativen zu Least Squares</a></li>
+<li class="chapter" data-level="4.4" data-path="chpt-lasso.html"><a href="chpt-lasso.html#sec-lasso"><i class="fa fa-check"></i><b>4.4</b> Lasso</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="chpt-lasso.html"><a href="chpt-lasso.html#regularisierung-bei-lasso"><i class="fa fa-check"></i><b>4.4.1</b> Regularisierung bei LASSO</a></li>
+<li class="chapter" data-level="4.4.2" data-path="chpt-lasso.html"><a href="chpt-lasso.html#subset-selection-bei-lasso"><i class="fa fa-check"></i><b>4.4.2</b> Subset Selection bei LASSO</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="chpt-lasso.html"><a href="chpt-lasso.html#bestimmung-von-lambda"><i class="fa fa-check"></i><b>4.5</b> Bestimmung von <span class="math inline">\(\lambda\)</span></a></li>
+<li class="chapter" data-level="4.6" data-path="chpt-lasso.html"><a href="chpt-lasso.html#analyse-mit-lasso-in-r"><i class="fa fa-check"></i><b>4.6</b> Analyse mit LASSO in R</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="abkurzungen.html"><a href="abkurzungen.html"><i class="fa fa-check"></i>Abkürzungen</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Angewandte Statistische Methoden in den Nutztierwissenschaften</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="chpt-lasso" class="section level1">
+<h1><span class="header-section-number">Kapitel 4</span> Least Absolute Shrinkage And Selection Operator (LASSO)</h1>
+<p>Das lineare Modell</p>
+<span class="math display">\[\begin{equation}
+y_i = \beta_0 + \sum_{j=1}^p \beta_jx_{ij} + \epsilon_i
+\label{eq:StandardLinMod}
+\end{equation}\]</span>
+<p>für eine Beobachtung <span class="math inline">\(i\)</span> (<span class="math inline">\(i=1,\ldots,n\)</span>) wird zur Modellierung von Zusammenhängen zwischen den erklärenden Variablen <span class="math inline">\(x_{i1},\ldots,x_{ip}\)</span> und der Zielgrösse <span class="math inline">\(y_i\)</span> verwendet. In einem Regressionsmodell werden die unbekannten Parameter <span class="math inline">\(\beta_j \ (j=0,\ldots,p)\)</span> mit Least Squares geschätzt.</p>
+<p>Die <span class="math inline">\((p+1)\)</span> Werte <span class="math inline">\(\beta_0, ..., \beta_p\)</span> und die Resteffekte <span class="math inline">\(\epsilon_i\)</span> sind unbekannt. Es wird angenommen, dass die Werte der erklärenden Variablen (<span class="math inline">\(x_{i1}, x_{i2}, ..., x_{ip}\)</span>) exakt, d.h. ohne Messfehler oder andere Ungenauigkeiten, bekannt sind. Für einen Datensatz mit <span class="math inline">\(n\)</span> Beobachtungen werden die resultierenden <span class="math inline">\(n\)</span> Gleichungen vorzugsweise in Matrix-Vektor-Schreibweise notiert.</p>
+<span class="math display">\[\begin{equation}
+y = X\beta + \epsilon
+\label{eq:StandardLinearModelMatrixVektor}
+\end{equation}\]</span>
+<div id="stochastische-restkomponente" class="section level2">
+<h2><span class="header-section-number">4.1</span> Stochastische Restkomponente</h2>
+<p>Die <span class="math inline">\(n\)</span> unbekannten Resteffekte im Vektor <span class="math inline">\(\epsilon\)</span> werden als zufällige Effekte modelliert, wobei angenommen wird, dass sich diese Resteffekte im Mittel aufheben, d.h., dass deren Erwartungswert <span class="math inline">\(E(\epsilon) = 0\)</span> ist. Die Streuung der Resteffekte wird im Standardmodell als konstant angenommen. Für die Covarianz des Vektors der Resteffekte bedeutet das, dass <span class="math inline">\(var(\epsilon) = I*\sigma^2\)</span> ist. Die Varianzkomponente <span class="math inline">\(\sigma^2\)</span> ist neben den Koeffizienten im Vektor <span class="math inline">\(\beta\)</span> ein weiterer unbekannter Parameter, welcher von den Daten geschätzt werden muss.</p>
+</div>
+<div id="parameterschatzung" class="section level2">
+<h2><span class="header-section-number">4.2</span> Parameterschätzung</h2>
+<p>Unter der Annahme, dass die Matrix <span class="math inline">\(X\)</span> vollen Kolonnenrang hat, d.h. die Anzahl Beobachtungen <span class="math inline">\(n\)</span> grösser ist als die Anzahl Parameter (hier <span class="math inline">\(p+1\)</span>) lassen sich die unbekannten Parameter <span class="math inline">\(\beta\)</span> mit <strong>Least Squares</strong> schätzen. Der Least Squares Schätzer <span class="math inline">\(\hat{\beta}\)</span> für <span class="math inline">\(\beta\)</span> wird berechnet aus</p>
+<span class="math display">\[\begin{equation}
+\hat{\beta} = argmin_{\beta}||y - X\beta||^2
+\label{eq:LsEstimateBeta}
+\end{equation}\]</span>
+<p>wobei <span class="math inline">\(||.||\)</span> für die Euklidsche Norm (Länge) im <span class="math inline">\(n\)</span>-dimensionalen Raum steht. Wird das Minimierungsproblem in Gleichung () aufgelöst, dann resultiert der folgende Ausdruck für <span class="math inline">\(\hat{\beta}\)</span></p>
+<span class="math display">\[\begin{equation}
+\hat{\beta} = (X^TX)^{-1}X^Ty
+\label{eq:LsEstimateBetaSol}
+\end{equation}\]</span>
+<p>Betrachten wir den Ausdruck in Gleichung () wird klar, weshalb die Matrix <span class="math inline">\(X\)</span> vollen Kolonnenrang haben muss, da nur so die Inverse <span class="math inline">\((X^TX)^{-1}\)</span> berechnet werden kann.</p>
+</div>
+<div id="alternativen-zu-least-squares" class="section level2">
+<h2><span class="header-section-number">4.3</span> Alternativen zu Least Squares</h2>
+<p>Das lineare Modell () erweist sich in der Praxis als sehr brauchbar. Mit der Least Squares-Technik besteht auch eine einfache und sehr gut etablierte Methode zur Parameterschätzung. In kürzerer Vergangenheit auch mit dem Aufkommen des Phänomes von “Big Data”, welches das systematische Sammeln von grossen Datenmengen ermöglicht, treten häufiger Probleme auf, bei welchen die im einleitenden Abschnitt aufgestellte Bedingung an Least Squres (<span class="math inline">\(n &gt; p\)</span>) nicht zutrifft.</p>
+<p>Da wir die positiven Eigenschaften des linearen Modells gerne beibehalten möchten, wurde nach Alternativen zu Least Squres gesucht. Diese möglichen Alternativen können in drei Kategorien eingeteilt werden.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Subset Selektion</strong>: Aus den <span class="math inline">\(p\)</span> erklärenden Variablen wird ein Subset von “relevanten” Variablen ausgewählt. Alle anderen Variablen werden ignoriert. Die relevanten Variablen werden oft aufgrund der Signifikanz des geschätzten Regressionskoeffizienten <span class="math inline">\(\beta_j\)</span> identifiziert.</li>
+<li><strong>Regularisierung (Shrinkage)</strong>: Alle <span class="math inline">\(p\)</span> erklärenden Variablen werden verwendet. Die geschätzten Regressionskoeffizienten werden durch bestimmte Techniken gegen den Nullpunkt “gedrückt”. Dieser Prozess wird als Schrumpfung (Shrinkage) bezeichnet. Die so erzeugte Reduktion der Variabilität der Schätzwerte wird als Regularisierung bezeichnet.</li>
+<li><strong>Dimensionsreduktion</strong>: Die <span class="math inline">\(p\)</span> erklärenden Variablen werden zu <span class="math inline">\(m\)</span> Linearkombinationen reduziert. Diese Reduktion kann mit Techniken, wie Principal Components Analysis oder Faktoranalyse gemacht werden.</li>
+</ol>
+</div>
+<div id="sec-lasso" class="section level2">
+<h2><span class="header-section-number">4.4</span> Lasso</h2>
+<p>Es gibt Schätzverfahren, welche mehrere der oben genannten Alternativen zu Least Squares kombinieren. Ein Beispiel dafür ist LASSO. LASSO steht für Least Absolute Shrinkage and Selection Operation und kombiniert “Subset Selection” und Regularisierung. Die Regularisierung wird durch das Hinzufügen eines Terms zu den Rest-Summenquadraten (<span class="math inline">\(RSS\)</span>), welche bei Least Squares minimiert werden. In Gleichung () haben wir gesehen, wie <span class="math inline">\(RSS\)</span> verwendet werden zur Berechnung der Least Squares Schätzer</p>
+<span class="math display">\[\begin{eqnarray}
+\hat{\beta}_{LS} &amp; = &amp; argmin_{\beta}||y - X\beta||^2 \nonumber \\
+                     &amp; = &amp; argmin_{\beta} \left\{\sum_{i = 1}^n\left(y_i - \beta_0 - \sum_{j=1}^p \beta_j x_{ij} \right)^2\right\} \nonumber \\
+                     &amp; = &amp; argmin_{\beta} RSS
+\label{eq:LsEstimateBetaExpandRSS}
+\end{eqnarray}\]</span>
+<div id="regularisierung-bei-lasso" class="section level3">
+<h3><span class="header-section-number">4.4.1</span> Regularisierung bei LASSO</h3>
+<p>Bei LASSO wird nun zu <span class="math inline">\(RSS\)</span> ein sogenannter Strafterm (penalty term) hinzugefügt. Dieser Strafterm beträgt <span class="math inline">\(\lambda\sum_{j=1}^p|\beta_j|\)</span>. Der Term wird deshalb als Strafterm bezeichnet, weil er mit steigender Summe der Absolutbeträge aller <span class="math inline">\(\beta_j\)</span> immer grösser wird. Diese führt zum gewünschten Effekt der Regularisierung. Das heisst durch das Hinzufügen dieses Strafterms werden die Absolutbeträge und somit die Variabilität der Koeffizientenschätzungen begrenzt, was der eigentliche Sinn und Zweck der Regularisierung ist.</p>
+<p>In Formeln ausgedrückt, lauten die geschätzten Regressionskoeffizienten für LASSO, wie folgt:</p>
+<span class="math display">\[\begin{eqnarray}
+\hat{\beta}_{LASSO} &amp; = &amp; argmin_{\beta} \left\{\sum_{i=1}^n\left(y_i - \beta_0 - \sum_{j=1}^p \beta_j x_{ij} \right)^2 + \lambda\sum_{j=1}^p|\beta_j| \right\} \nonumber \\
+                     &amp; = &amp; argmin_{\beta} \left\{RSS + \lambda\sum_{j=1}^p|\beta_j|\right\}
+\label{eq:LsEstimateBetaLASSO}
+\end{eqnarray}\]</span>
+</div>
+<div id="subset-selection-bei-lasso" class="section level3">
+<h3><span class="header-section-number">4.4.2</span> Subset Selection bei LASSO</h3>
+<p>Wie schon im vorangegangenen Abschnitt beschrieben, dient der Strafterm <span class="math inline">\(\lambda\sum_{j=1}^p|\beta_j|\)</span> zur Regularisierung der geschätzten Koeffizienten <span class="math inline">\(\beta_j\)</span> im linearen Modell. Der Strafterm spielt auch eine entscheidene Rolle bei der Subset Selection. Dadurch, dass der Strafterm die Absolutbeträge der Koeffizienten <span class="math inline">\(\beta_j\)</span> summiert, werden die Schätzungen von gewissen Koeffizienten explizit auf Null gesetzt. Weshalb dieser Effekt der Subset Selection bei LASSO eintritt kann mit folgender Abbildung (siehe nächste Seite) erklärt werden.</p>
+<p>In dieser Abbildung sind nur zwei erklärende Variablen gezeigt und somit ist <span class="math inline">\(p=2\)</span>. Die Koeffizienten zu den erklärenden Variablen werden in der Abbildung mit <span class="math inline">\(b\)</span> und nicht mit <span class="math inline">\(\beta\)</span> bezeichnet. Unter der Annahme, dass wir unendlich viele Daten hätten, wäre der Schätzer der Koeffizienten <span class="math inline">\(b_j\)</span> mit minimalem Fehler am Punkt, welcher in der Abbildung mit <span class="math inline">\(\hat{b}\)</span> bezeichnet ist. Die grünen Ellipsen um diesen Punkt <span class="math inline">\(\hat{b}\)</span> sind die Linien mit konstantem Fehler. Die rote Linie steht für die Grenze, welche durch den Strafterm aus LASSO entsteht. Das heisst geschätzte Koeffizienten können nur links dieser roten Linie liegen. Da wir den geschätzten Koeffizienten <span class="math inline">\(\hat{b}_j\)</span> einerseits minimalen Fehler erreichen wollen und auf der anderen Seite innerhalb der Regularisierungsgrenzen sein müssen, liegen die besten Schätzer für <span class="math inline">\(b_j\)</span> am Schnittpunkt zwischen den grünen Ellipsen und der roten Linie. Durch den Verlauf der roten Linie ist die Wahrscheinlichkeit, dass sich die grünen Ellipsen und die rote Linie auf einer Koordinatenachse schneiden sehr hoch. Schneiden sich die grünen Ellipsen und die rote Linie auf einer Koordinatenachse, dann wurde ein Schätzer für einen Koeffizienten <span class="math inline">\(b_j\)</span> auf Null gesetzt und somit haben wir den gewünschten Effekt der Subset Selection erreicht.</p>
+<p><img src="Lasso" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="bestimmung-von-lambda" class="section level2">
+<h2><span class="header-section-number">4.5</span> Bestimmung von <span class="math inline">\(\lambda\)</span></h2>
+<p>Der Strafterm, welcher in Gleichung () eingefügt wurde und für die Regularisierung bei LASSO verantwortlich ist, enhält eine Variable <span class="math inline">\(\lambda\)</span>. Diese Variable bestimmt das Ausmass der Regularisierung und muss als zusätzlicher Parameter aus den Daten bestimmt werden. Für die Bestimmung von <span class="math inline">\(\lambda\)</span> wird eine sogenannte Kreuzvalidierungsprozedur (cross validation) verwendet. Bei einer Kreuzvalidiuerng werden die Beobachtungen zufällig in ein sogenanntes Trainings-Set und in ein Test-Set unterteilt, wobei das Test-Set meist weniger Beobachtungen enthält als das Trainings-Set. Mit dem Trainings-Set werden dann die Koeffizienten <span class="math inline">\(\beta_j\)</span> geschätzt. Dann werden für vorher bestimmte Werte von <span class="math inline">\(\lambda\)</span> die Beobachtungen im Test-Set vorhergesagt. Der Wert von <span class="math inline">\(\lambda\)</span>, welcher die tiefsten Vorhersagefehler liefert, wird als optimaler Schätzwert von <span class="math inline">\(\lambda\)</span> betrachtet.</p>
+</div>
+<div id="analyse-mit-lasso-in-r" class="section level2">
+<h2><span class="header-section-number">4.6</span> Analyse mit LASSO in R</h2>
+<p>In diesem Abschnitt wird gezeigt, wie ein Datensatz mit LASSO in R analysiert werden kann. Wir verwenden dazu den <code>Hitters</code>- Datensatz aus dem Buch von <span class="citation">James et al. (<a href="#ref-JWHT2013">2013</a>)</span>. Dieser Datensatz enthält als Zielgrösse das Einkommen von Baseballspielern und zu diesen Spielern noch weitere erklärende Variablen. Der Datensatz ist im R-Package <code>ISLR</code> integriert. Für die Analyse werden wir die Funktion <code>glmnet()</code> aus dem gleichnamigen R-Package verwenden. Als erstes installieren wir die beiden Packages und ignorieren alle Records, welche fehlende Daten aufweisen.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">if (!<span class="kw">require</span>(ISLR)) {
+  <span class="kw">install.packages</span>(<span class="st">&quot;ISLR&quot;</span>)
+  <span class="kw">require</span>(ISLR)
+}
+  
+if (!<span class="kw">require</span>(glmnet)){
+  <span class="kw">install.packages</span>(<span class="st">&quot;glmnet&quot;</span>)
+  <span class="kw">require</span>(glmnet)
+}
+  
+### # records mit fehlenden Daten ignorieren
+<span class="kw">data</span>(Hitters)
+Hitters &lt;-<span class="st"> </span><span class="kw">na.omit</span>(Hitters)
+<span class="kw">dim</span>(Hitters)</code></pre></div>
+<pre><code>## [1] 263  20</code></pre>
+<p>Da wir für die Bestimmung von <span class="math inline">\(\lambda\)</span> mit Kreuzvalidierung ein Trainings- und ein Test-Set benötigen, bestimmen wir diese durch den Zufallszahlengenerator und der Funktion <code>sample()</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span> (<span class="dv">1</span>)
+train &lt;-<span class="st"> </span><span class="kw">sample</span> (<span class="kw">c</span>(<span class="ot">TRUE</span> ,<span class="ot">FALSE</span>), <span class="kw">nrow</span>(Hitters), <span class="dt">rep=</span><span class="ot">TRUE</span>)
+test  &lt;-<span class="st"> </span>(!<span class="st"> </span>train )</code></pre></div>
+<p>Wir verwenden die Funktion <code>glmnet()</code> zur Modellierung mit LASSO. Für diese Funktion muss das Modell anders spezifiziert werden als für die Funktion <code>lm()</code>. Wir brauchen dazu die Objekte <code>x</code> und <code>y</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">model.matrix</span> (Salary ~<span class="st"> </span>., Hitters)[,-<span class="dv">1</span>]
+y &lt;-<span class="st"> </span>Hitters$Salary</code></pre></div>
+<p>Die vorgegebenen Werte für <span class="math inline">\(\lambda\)</span> werden in der Variablen <code>grid</code> abgelegt. Es handelt sich um <span class="math inline">\(100\)</span> Werte zwischen <span class="math inline">\(10^10\)</span> und <span class="math inline">\(10^{-2}\)</span>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">grid &lt;-<span class="st"> </span><span class="dv">10</span>^<span class="st"> </span><span class="kw">seq</span> (<span class="dv">10</span>,-<span class="dv">2</span>, <span class="dt">length =</span><span class="dv">100</span>)</code></pre></div>
+<p>The following statements fits a LASSO model.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">lasso.mod &lt;-<span class="st"> </span><span class="kw">glmnet</span> (x[train ,],y[train],<span class="dt">alpha =</span><span class="dv">1</span>, <span class="dt">lambda =</span> grid)
+<span class="kw">plot</span>(lasso.mod)</code></pre></div>
+<p><img src="bookdown-asmas_files/figure-html/LassoModel-1.png" width="672" /></p>
+<p>Der Plot zeigt, wie sich der Strafterm für verschiedene Werte (durch Farben codiert) verhält. Nun wollen wir den besten Wert für <span class="math inline">\(\lambda\)</span> bestimmen. Dies wird durch Kreuzvalidierung gemacht.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span> (<span class="dv">1</span>)
+cv.out &lt;-<span class="st"> </span><span class="kw">cv.glmnet</span> (x[train ,],y[train],<span class="dt">alpha =</span><span class="dv">1</span>)
+bestlam &lt;-<span class="st"> </span>cv.out$lambda.min</code></pre></div>
+<p>Der Anteil an Koeffizienten, welcher durch LASSO null gesetzt wird kann mit folgenden Statements überprüft werden.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">out &lt;-<span class="st"> </span><span class="kw">glmnet</span>(x, y, <span class="dt">alpha =</span> <span class="dv">1</span>, <span class="dt">lambda =</span> grid)
+lasso.coef &lt;-<span class="st"> </span><span class="kw">predict</span>(out, <span class="dt">type =</span> <span class="st">&quot;coefficients&quot;</span>, <span class="dt">s=</span>bestlam )[<span class="dv">1</span>:<span class="dv">20</span>,]
+lasso.coef</code></pre></div>
+<pre><code>##   (Intercept)         AtBat          Hits         HmRun          Runs 
+##  8.898370e-01 -5.575622e-03  2.007078e+00  0.000000e+00  0.000000e+00 
+##           RBI         Walks         Years        CAtBat         CHits 
+##  0.000000e+00  2.268641e+00 -3.428874e-02  0.000000e+00  0.000000e+00 
+##        CHmRun         CRuns          CRBI        CWalks       LeagueN 
+##  8.315024e-03  2.102106e-01  4.211554e-01  0.000000e+00  1.695962e+01 
+##     DivisionW       PutOuts       Assists        Errors    NewLeagueN 
+## -1.143553e+02  2.343374e-01  0.000000e+00 -6.607899e-01  0.000000e+00</code></pre>
+
+<!-- ------------------------------------------------------------------- --
+  -- END of document:  Below this must not be anything, except the stuff --
+  -- concerning the table of abbreviations                               -->
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-JWHT2013">
+<p>James, G., D. Witten, T. Hastie, and R. Tibshirani, eds. 2013. <em>An Introduction to Statistical Learning</em>. Springer. doi:<a href="https://doi.org/10.1007/978-1-4614-7138-7">10.1007/978-1-4614-7138-7</a>.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="gblup.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="abkurzungen.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/04-lasso.Rmd",
+"text": "Edit"
+},
+"download": ["bookdown-asmas.pdf", "bookdown-asmas.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

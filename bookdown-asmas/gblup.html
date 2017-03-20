@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="intro.html">
+<link rel="prev" href="linreg.html">
+<link rel="next" href="chpt-lasso.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -190,50 +190,17 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Angewandte Statistische Methoden in den Nutztierwissenschaften</h1>
-<h4 class="author"><em>Peter von Rohr</em></h4>
-<h4 class="date"><em>2017-03-20</em></h4>
-</div>
-<div id="vorwort" class="section level1 unnumbered">
-<h1>Vorwort</h1>
-<p>Dieses Dokument umfasst die kompletten Unterlagen zur Vorlesung <strong>Angewandte Statistische Methoden in den Nutztierwissenschaften</strong>. Der Titel dieser Vorlesung ist sehr allgemein gehalten. Dies würde es erlauben einen grosszügigen Überblick über eine breite Palette an statistischen Methoden, welche in den Nutztierwissenschaften eingesetzt werden, zu geben.</p>
-<p>Wir schlagen an dieser Stelle aber einen anderen Weg ein, und fokussieren uns auf die statistischen Methoden in der genomischen Selektion. Nur diese bewusste Wahl eines spezifischen Gebietes ermöglicht es uns, den behandelten Stoff angemessen zu vertiefen. Im anschliessenden Unterabschnitt wollen wir die hier getroffene Entscheidung der Fokusierung auf die genomische Selektion motivieren. Dabei wird klar, dass wir mit der Wahl des Themas der multiplen linearen Regression als Ausgangspunkt auch eine Leserschaft ansprechen, welche nicht primär an der Tierzucht interessiert ist.</p>
-<div id="motivation" class="section level2 unnumbered">
-<h2>Motivation</h2>
-<p>Vom Standpunkt der statistischen Modellierung, ist das einfache lineare Modell mit fixen Effektstufen für den Einsatz in der genomischen Selektion ausreichend. Diese Art von Modellen werden auch als Regressionsmodelle bezeichnet. Die Problematik entsteht erst bei der Technik, welche wir für die Schätzung der unbekannten Parameter verwenden können. In der klassischen Regressionsanalyse ist die Methode der kleinsten Quadrate (Least Squares) die Methode der Wahl. Least Squares können wir aber für die genomische Selektion nicht verwenden, da die Anzahl unbekannter Parameter (<span class="math inline">\(p\)</span>) grösser ist als die Anzahl Beobachtungen (<span class="math inline">\(n\)</span>).</p>
-<p>Mit der steigenden Grösse und Komplexität von aktuellen Datensätzen tritt das soeben beschriebene Problem nicht nur in der Tierzucht auf, sondern es gibt eine breite Palette von Anwendungen. In der Vorlesung beschrieben wir diese Problematik am Beispiel der genomischen Selektion und es werden alternative Techniken zur Schätzung von Parametern vorgeschlagen. Da die Methode der multiplen Regressionsanalyse in früheren Vorlesungen behandelt wurde, bietet diese ein idealer Ausgangspunkt für den in dieser Veranstaltung präsentierten Stoffinhalt.</p>
-</div>
-<div id="einordnung" class="section level2 unnumbered">
-<h2>Einordnung</h2>
-<p>Die Vorlesung <strong>Angewandte Statistische Methoden in den Nutztierwissenschaften</strong> ist eine halb-semestrige Veranstaltung und wird im Masterstudiengang Agrarwissenschaften der ETH Zürich angeboten.</p>
-</div>
-<div id="lernziele" class="section level2 unnumbered">
-<h2>Lernziele</h2>
-<p>Für die Verwendung des hier präsentierten Stoffs schlagen wir die folgenden Lernziele vor.</p>
-<p>Die Studierenden …</p>
-<ul>
-<li>kennen die Eigenschaften der multiplen linearen Regression und</li>
-<li>können einfache Datensätze mithilfe der Regressionsmethode analysieren</li>
-<li>wissen wieso multiple lineare Regressionen bei der genomischen Selektion nicht brauchbar ist</li>
-<li>kennen die in der genomischen Selektion verwendeten statistischen Verfahren, wie
-<ul>
-<li>BLUP-basierte Verfahren,</li>
-<li>Bayes’sche Verfahren und</li>
-<li>die LASSO Methode</li>
-</ul></li>
-<li>können einfache Übungsbeispiele mit der Statistiksoftware R erfolgreich bearbeiten.</li>
-</ul>
+<div id="gblup" class="section level1">
+<h1><span class="header-section-number">Kapitel 3</span> Genomic Best Linear Unbiased Prediction</h1>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="linreg.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chpt-lasso.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -262,7 +229,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-gblup.Rmd",
 "text": "Edit"
 },
 "download": ["bookdown-asmas.pdf", "bookdown-asmas.epub"],
