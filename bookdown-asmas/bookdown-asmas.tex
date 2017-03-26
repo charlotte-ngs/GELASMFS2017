@@ -124,7 +124,7 @@
   \postauthor{\par}
   \predate{\centering\large\emph}
   \postdate{\par}
-  \date{2017-03-20}
+  \date{2017-03-26}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -1644,6 +1644,336 @@ mit folgenden Statements überprüft werden.
 ## -1.143553e+02  2.343374e-01  0.000000e+00 -6.607899e-01  0.000000e+00
 \end{verbatim}
 
+\chapter{Bayes'sche Ansätze}\label{bayessche-ansatze}
+
+\section{Einführung}\label{einfuhrung}
+
+In der Statistik gibt es zwei verschiedene Lehrmeinungen. Es sind dies
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  die \textbf{Frequentisten} und
+\item
+  die \textbf{Bayesianer}.
+\end{enumerate}
+
+Alle bisher
+\footnote{Hier ist nicht nur diese Vorlesung sondern auch die Züchtungslehre und die angewandet Zuchtwertschätzung gemeint}
+vorgestellten statistischen Konzepte, so zum Beispiel
+\texttt{Least\ Squares}, \texttt{Maximum\ Likelihood}, \texttt{REML} und
+\texttt{BLUP} stammen aus dem Lager der Frequentisten.
+
+Die Unterschiede zwischen Frequentisten und Bayesianern bestehen
+hauptsächlich in
+
+\begin{itemize}
+\tightlist
+\item
+  deren Verständnis von Wahrscheinlichkeiten
+\item
+  deren Unterteilung von Modell- und Datenkomponenten
+\item
+  deren Techniken zur Schätzung von Parametern
+\end{itemize}
+
+Die folgende Tabelle gibt eine Übersicht über die Unterschiede.
+
+\begin{tabular}{p{3cm}p{6cm}p{6cm}}
+\hline
+Was                            &  Frequentisten  &  Bayesianer \\
+\hline
+Wahrscheinlichkeiten           &  Eigenschaften von Zufallsvariablen, welche bei grossen Stichproben eintreten
+                               &  Mass für Informationsgehalt unabhängig von Stichprobengrösse \\
+Modell- und Datenkomponenten   &  Unterscheidung zwischen Modellparametern und Daten. Parameter sind unbekannt, Daten sind bekannt. Fehlende Daten werden ignoriert
+                               &  Unterscheidung zwischen unbekannten und bekannten Grössen, unabhängig ob Parameter oder Daten. Fehlende Daten können simuliert werden \\
+Schätztungen von Parametern    &  ML oder REML werden für Parameterschätzung verwendet
+                               &  MCMC Zufallszahlen zur Approximation der gewünschten a posteriori Verteilungen \\
+\hline
+\end{tabular}
+
+\section{Das Lineare Modell}\label{das-lineare-modell}
+
+Die Bayes'sche Art der Parameterschätzung soll an einem einfachen
+linearen Modell gezeigt werden. Angenommen, wir betrachten das Modell
+
+\begin{equation}
+y_i = \beta_0 + \beta_1 x_{i1} + \epsilon_i
+\label{eq:BayLinMod}
+\end{equation}
+
+wobei \(y_i\) die \(i\)-te Beobachtung einer Zielgrösse ist, \(\beta_0\)
+für den Achsenabschnitt steht, \(x_1\) eine erklärende Variable ist und
+\(\epsilon_i\) für den Restterm steht. Für den Restterm nehmen wir an,
+dass deren Varianz konstant gleich \(\sigma^2\) ist.
+
+\subsection{Bekannte und Unbekannte}\label{bekannte-und-unbekannte}
+
+Unter der Annahme, dass wir für die Zielgrösse \(y_i\) und die
+erklärende Variable \(x_1\) keine fehlenden Daten haben, dann machen wir
+als Bayesianer folgende Einteilung in bekannte und unbekannte Grössen.
+
+und als \textbf{bekannte} Grössen
+
+\begin{center}
+\begin{tabular}{p{3cm}cc}
+\hline
+Was         &  bekannt  &  unbekannt \\
+\hline
+$y_i$       &    X      & \\
+$x_1$       &    X      & \\
+$\beta_0$   &           &      X \\
+$\beta_1$   &           &      X \\
+$\sigma^2$  &           &      X \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Vorgehen bei
+Parameterschätzung}\label{vorgehen-bei-parameterschatzung}
+
+Bayesianer basieren Schätzungen von unbekannten Grössen auf der
+sogenannten \textbf{a posteriori Verteiung} der unbekannten Grössen
+gegeben die bekannten Grössen. Die a posteriori Verteilung wird mithilfe
+des \textbf{Satzes von Bayes} aufgrund der a priori Verteilung der
+unbekannten und aufgrund der Likelihood berechnet.
+
+Die Bezeichnungen ``a priori'' und ``a posteriori'' beziehen sich immer
+auf den Zeitpunkt der Beobachtung der analysierten Daten. Die jeweiligen
+Verteilungen quantifizieren den Informationsstand zu den Unbekannten um
+jeweiligen Zeitpunkt. Dieses Konzept soll anhand der folgenden Grafik
+verdeutlicht werden.
+
+\begin{center}\includegraphics[width=8cm]{AprioriAposteriori} \end{center}
+
+Für unser Beispiel des einfachen linearen Modells, definieren wir zuerst
+den Vektor \(\mathbf{\beta}\) als
+
+\[\beta = \left[\begin{array}{c} \beta_0  \\  \beta_1 \end{array} \right].\]
+
+Die Beobachtungen \(y_i\) fassen wir ebenfalls zu einem Vektor \(y\)
+zusammen. Für den Moment nehmen wir an, dass \(\sigma^2\) bekannt sei.
+Eine Bayes'sche Parameterschätzung für \(\beta\) basiert dann auf der a
+posteriori Verteilung \(f(\beta | y, \sigma^2)\) der Unbekannten
+\(\beta\) gegeben die Bekannten \(y\) und \(\sigma^2\). Diese a
+posteriori Verteilung lässt sich mit dem Satz von Bayes, wie folgt
+berechnen
+
+\begin{eqnarray}
+f(\beta | y, \sigma^2) & =       & \frac{f(\beta, \sigma^2, y)}{f(y, \sigma^2)} \nonumber \\
+                       & =       & \frac{f(y | \beta, \sigma^2)f(\beta)f(\sigma^2)}{f(y, \sigma^2)} \nonumber \\
+                       & \propto & f(y | \beta, \sigma^2)f(\beta)f(\sigma^2)
+\label{LinModAPostProb}
+\end{eqnarray}
+
+In Gleichung (\ref{LinModAPostProb}) konnten wir die a posteriori
+Verteilung \(f(\beta | y, \sigma^2)\) als Produkt der a priori
+Verteilungen (\(f(\beta)\) und \(f(\sigma^2)\)) der unbekannten Grössen
+\(\beta\) und \(\sigma^2\) und der Likelihood \(f(y | \beta, \sigma^2)\)
+ausdrücken. Der Faktor \(f(y, \sigma^2)^{-1}\) (Term im Nenner)
+entspricht der sogenannten Normalisierungskonstanten und ist nicht
+weiter von Interesse. Somit wird die a posteriori Verteilung oft als
+Proporzionalitätsbeziehung angegeben.
+
+Die a posteriori Verteilung \(f(\beta | y, \sigma^2)\) ist in vielen
+Fällen nicht explizit darstellbar. Das war lange ein Problem, welches
+die Anwendung von Bayes'schen Analysen sehr einschränkte. Zwei
+Entwicklungen haben dieses Problem beseitigt.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  In seinem Paper (\citet{Besa1974}) zeigte Julian Besag, dass jede
+  posteriori Verteilung durch eine Serie von Zufallszahlen aus den
+  voll-bedingten Verteilungen bestimmt ist. Für unser Beispiel lauten
+  die voll-bedingten Verteilungen: Bedingte Verteilung von \(\beta_0\)
+  gegeben alle anderen Grössen: \(f(\beta_0 | \beta_1, \sigma^2, y)\),
+  bedingte Verteilung von \(\beta_1\) gegeben alle anderen Grössen:
+  \(f(\beta_1 | \beta_0, \sigma^2, y)\).
+\item
+  Die Entwicklung von effizienten Pseudo-Zufallszahlen-Generatoren auf
+  dem Computer.
+\end{enumerate}
+
+\section{Gibbs Sampler}\label{gibbs-sampler}
+
+Die Umsetzung der beiden oben aufgelisteten Punkte führt zu einer
+Prozedur, welche als \textbf{Gibbs Sampler} bezeichnet wird. Wenden wir
+den Gibbs Sampler auf einfaches lineares Regressionsmodell an, dann
+resultiert das folgende Vorgehen bei der Analyse. Unabhängig vom
+verwendeten Modell läuft die Konstruktion einer Gibbs Sampling Prozedur
+immer in den folgenden Schritten ab. Diese Schritte können für die
+meisten Analysen wie ein Kochbuchrezept verwendet werden.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Bestimmung der a priori Verteilungen für die unbekannten Grössen.
+\item
+  Bestimmung der Likelihood
+\item
+  Bestimmung der voll-bedingten Verteilungen
+\end{enumerate}
+
+\subsection{A priori Verteilungen}\label{a-priori-verteilungen}
+
+In unserem Bespiel handelt es sich dabei um \(f(\beta)\) und
+\(f(\sigma^2)\). In den meisten Fällen, wenn man das erste Mal eine
+bestimmte Art von Daten analysisern soll, empfielt es sich eine
+sogenannte uniformative a priori Verteilung zu wählen. Eine
+uninformative a priori Verteilung bedeutet einfach, dass deren
+Dichtewert überall gleich, also eine Konstante ist. Wenden wir zum
+Beispiel für die Unbekannte \(\beta\) eine uninformative a priori
+Verteilung an, dann bedeutet das, dass wir \(f(\beta) = c\).
+
+Alternativ zu der uniformativen a priori Verteilung gibt es auch a
+priori Verteiungen für bestimmte unbekannte Grössen, welche als de-facto
+Standard aktzeptiert sind. Ein Bespiel dafür ist die a priori Verteilung
+der unbekannten Restvarianz, welche üblicherweise als
+Inverse-Chi-Quadrat Verteilung angenommen wird.
+
+\subsection{Likelihood}\label{likelihood}
+
+Die Likelihood ist wie bei den Frequentisten als begingte Verteilung
+(\(f(y | \beta, \sigma^2)\)) der Daten \(y\) gegeben die Parameter
+(\(\beta\) und \(\sigma^2\)). Falls keine Daten fehlen, dann ist die
+Bayes'sche Likelihood und die frequentistische Likelihood gleich.
+
+\subsection{Vollbedingte Verteilungen}\label{vollbedingte-verteilungen}
+
+Mit vollbedingten Verteilungen ist gemeint, dass für jede unbekannte
+Grösse die bedingte Verteilung gegeben alle anderen Grössen bestimmt
+wird. In unserem Bespiel des linearen Regressionsmodells haben wir zwei
+unbekannte Grössen \(\beta_0\) und \(\beta_1\). Somit haben wir auch
+zwei vollbedingte Verteilungen. Unter der Annahme, dass unsere Daten
+(\(y\)) einer Normalverteilung folgen, resultieren die folgenden
+vollbedingten Verteilungen.
+
+\vspace{2ex}
+
+\begin{center}
+\begin{tabular}{lll}
+\hline
+unbekannte Grösse  &  unbekannte Grösse                    &  resultierende Verteilung \\
+\hline
+$\beta_0$          &  $f(\beta_0 | \beta_1, \sigma^2, y)$  &  $\mathcal{N}\left(\hat{\beta}_0, var(\hat{\beta}_0)\right)$ \\
+$\beta_1$          &  $f(\beta_1 | \beta_0, \sigma^2, y)$  &  $\mathcal{N}\left(\hat{\beta}_1, var(\hat{\beta}_1)\right)$ \\
+\hline
+\end{tabular}
+\end{center}
+
+Aufgrund von Berechnungen, welche hier nicht gezeigt sind, können wir
+die oben aufgelisteten vollbedingten Verteilungen bestimmen. Die
+entsprechenden Verteilungen sind in der Kolonnen ganz rechts, welche mit
+``resultierende Verteilung'' überschrieben ist, aufgelistet. Dabei steht
+\(\mathcal{N}()\) für die Normalverteilung. Für die Erwartungswerte und
+Varianzen wird das Modell in Gleichung (\ref{eq:BayLinMod}) leicht
+umformuliert.
+
+\begin{equation}
+\mathbf{y} = \mathbf{1}\beta_0 + \mathbf{x}\beta_1 + \mathbf{\epsilon}
+\label{eq:BayLinModReform}
+\end{equation}
+
+Aus dem obigen Modell bilden wir ein neues Modell, welches auf der
+rechten Seite der Gleichung nur von \(\beta_0\) und
+\(\mathbf{\epsilon}\) abhängt. Da wir wissen, dass die Verteilung der
+Least Squares Schätzer eine Normalverteilung ist, werden wir diese für
+die Bestimmung der vollbedingten Verteilungen verwenden.
+
+\begin{equation}
+\mathbf{w}_0 = \mathbf{1}\beta_0 + \mathbf{\epsilon}
+\label{eq:BayLinModW0}
+\end{equation}
+
+wobei \(\mathbf{w}_0 = \mathbf{y} - \mathbf{x}\beta_1\). Aufgrund des
+Modells in Gleichung (\ref{eq:BayLinModW0}) können wir den Least Squares
+Schätzer für \(\beta_0\) aufstellen. Dieser lautet:
+
+\begin{equation}
+\hat{\beta}_0 = (\mathbf{1}^T\mathbf{1})^{-1}\mathbf{1}^T\mathbf{w}_0
+\label{eq:Beta0LsEst}
+\end{equation}
+
+Die Varianz des Least Squares Schätzers für \(\beta_0\) lautet:
+
+\begin{equation}
+var(\hat{\beta}_0) = (\mathbf{1}^T\mathbf{1})^{-1}\sigma^2
+\label{eq:VarBeta0LsEst}
+\end{equation}
+
+Analog zu \(\beta_0\) berechnen wir den Least Squares Schätzer für
+\(\beta_1\) und dessen Varianz.
+
+\begin{equation}
+\hat{\beta}_1 = (\mathbf{x}^T\mathbf{x})^{-1}\mathbf{x}^T\mathbf{w}_1
+\label{eq:Beta1LsEst}
+\end{equation}
+
+wobei \(\mathbf{w}_1 = \mathbf{y} - \mathbf{1}\beta_0\)
+
+\begin{equation}
+var(\hat{\beta}_1) = (\mathbf{x}^T\mathbf{x})^{-1}\sigma^2
+\label{eq:VarBeta1LsEst}
+\end{equation}
+
+\subsection{Umsetzung des Gibbs
+Samplers}\label{umsetzung-des-gibbs-samplers}
+
+Der Gibbs Sampler wird durch wiederholtes ziehen von Zufallszahlen aus
+den oben angegebenen vollbedingten Verteilungen umgesetzt. Das heisst,
+wir setzen für alle unbekannten Grössen sinnvolle Startwerte ein. Für
+\(\beta_0\) und \(\beta_1\) wählen wir \(0\) als Startwert. Dann
+berechnen wir den Erwartungswert und die Varianz für die vollbedingte
+Verteilung von \(\beta_0\). Aus dieser Verteilung ziehen wir einen neuen
+Wert für \(\beta_0\). In einem zweiten Schritt berechnen wir den
+Erwartungswert und die Varianz für die vollbedingte Verteilung von
+\(\beta_1\), wobei wir für \(\beta_0\) schon den neuen Wert einsetzen.
+Aus der Verteilung für \(\beta_1\) ziehen wir einen neuen Wert für
+\(\beta_1\). Danach beginnen wir die Schritte wieder bei \(\beta_0\).
+Diese Schrittabfolge wiederholen wir \(10000\) mal und speichern alle
+gezogenen Werte für \(\beta_0\) und \(\beta_1\). Die Bayes'schen
+Parameterschätzungen entsprechen dann den Mittelwerten der gespeicherten
+Werte.
+
+Der folgende R-Codeblock soll die Umsetzung des Gibbs Samplers für
+\(\beta_0\) und \(\beta_1\) als Programm zeigen. Der Einfachheit halber
+wurde \(\sigma^2\) konstant \(\sigma^2=1\) angenommen.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# ### Startwerte für beta0 und beta1}
+\NormalTok{beta <– }\KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{0}\NormalTok{)}
+\CommentTok{# ### Bestimmung der Anzahl Iterationen}
+\NormalTok{niter <– }\DecValTok{10000}
+\CommentTok{# ### Initialisierung des Vektors mit Resultaten}
+\NormalTok{meanBeta <– }\KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{0}\NormalTok{)}
+\NormalTok{for (iter in }\DecValTok{1}\NormalTok{:niter) \{}
+  \CommentTok{# Ziehung des Wertes des Achsenabschnitts beta0}
+  \NormalTok{w <– y -}\StringTok{ }\NormalTok{X[, }\DecValTok{2}\NormalTok{] *}\StringTok{ }\NormalTok{beta[}\DecValTok{2}\NormalTok{]}
+  \NormalTok{x <– X[, }\DecValTok{1}\NormalTok{]}
+  \NormalTok{xpxi <– }\DecValTok{1}\NormalTok{/(}\KeywordTok{t}\NormalTok{(x) %*%}\StringTok{ }\NormalTok{x)}
+  \NormalTok{betaHat <– }\KeywordTok{t}\NormalTok{(x) %*%}\StringTok{ }\NormalTok{w *}\StringTok{ }\NormalTok{xpxi}
+  \CommentTok{# ### neue Zufallszahl fuer beta0}
+  \NormalTok{beta[}\DecValTok{1}\NormalTok{] <– }\KeywordTok{rnorm}\NormalTok{(}\DecValTok{1}\NormalTok{, betaHat, }\KeywordTok{sqrt}\NormalTok{(xpxi))}
+  \CommentTok{# Ziehung der Steigung beta1}
+  \NormalTok{w <– y -}\StringTok{ }\NormalTok{X[, }\DecValTok{1}\NormalTok{] *}\StringTok{ }\NormalTok{beta[}\DecValTok{1}\NormalTok{]}
+  \NormalTok{x <– X[, }\DecValTok{2}\NormalTok{]}
+  \NormalTok{xpxi <– }\DecValTok{1}\NormalTok{/(}\KeywordTok{t}\NormalTok{(x) %*%}\StringTok{ }\NormalTok{x)}
+  \NormalTok{betaHat <– }\KeywordTok{t}\NormalTok{(x) %*%}\StringTok{ }\NormalTok{w *}\StringTok{ }\NormalTok{xpxi}
+  \CommentTok{# ### neue Zufallszahl fuer beta1}
+  \NormalTok{beta[}\DecValTok{2}\NormalTok{] <– }\KeywordTok{rnorm}\NormalTok{(}\DecValTok{1}\NormalTok{, betaHat, }\KeywordTok{sqrt}\NormalTok{(xpxi))}
+  \NormalTok{meanBeta <– meanBeta +}\StringTok{ }\NormalTok{beta}
+\NormalTok{\}}
+\CommentTok{# ### Ausgabe der Ergebnisse}
+\KeywordTok{cat}\NormalTok{(}\KeywordTok{sprintf}\NormalTok{(}\StringTok{"Achsenabschnitt = %6.3f }\CharTok{\textbackslash{}n}\StringTok{"}\NormalTok{, meanBeta[}\DecValTok{1}\NormalTok{]/iter))}
+\KeywordTok{cat}\NormalTok{(}\KeywordTok{sprintf}\NormalTok{(}\StringTok{"Steigung = %6.3f }\CharTok{\textbackslash{}n}\StringTok{"}\NormalTok{, meanBeta[}\DecValTok{2}\NormalTok{]/iter))}
+\end{Highlighting}
+\end{Shaded}
+
 \chapter*{Abkürzungen}\label{abkurzungen}
 \addcontentsline{toc}{chapter}{Abkürzungen}
 
@@ -1662,6 +1992,12 @@ i.i.d. & independent, identically distributed\\
 QQ & Quantil Quantil\\
 \hline
 LASSO & Least Absolute Shrinkage And Selection Operator\\
+\hline
+REML & Restricted oder Residual Maximum Likelihood\\
+\hline
+ML & Maximum Likelihood\\
+\hline
+MCMC & Markov Chain Monte Carlo\\
 \hline
 \end{tabular}
 

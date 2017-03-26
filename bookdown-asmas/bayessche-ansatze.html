@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="bayessche-ansatze.html">
-<link rel="next" href="references.html">
+<link rel="prev" href="chpt-lasso.html">
+<link rel="next" href="abkurzungen.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -203,62 +203,164 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="abkurzungen" class="section level1 unnumbered">
-<h1>Abkürzungen</h1>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Abbreviation</th>
-<th align="left">Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">QTL</td>
-<td align="left">Quatitative Trait Loci</td>
-</tr>
-<tr class="even">
-<td align="left">GWAS</td>
-<td align="left">Genome Wide Association Study</td>
-</tr>
-<tr class="odd">
-<td align="left">GLMM</td>
-<td align="left">Generalized Linear Mixed Models</td>
-</tr>
-<tr class="even">
-<td align="left">i.i.d.</td>
-<td align="left">independent, identically distributed</td>
-</tr>
-<tr class="odd">
-<td align="left">QQ</td>
-<td align="left">Quantil Quantil</td>
-</tr>
-<tr class="even">
-<td align="left">LASSO</td>
-<td align="left">Least Absolute Shrinkage And Selection Operator</td>
-</tr>
-<tr class="odd">
-<td align="left">REML</td>
-<td align="left">Restricted oder Residual Maximum Likelihood</td>
-</tr>
-<tr class="even">
-<td align="left">ML</td>
-<td align="left">Maximum Likelihood</td>
-</tr>
-<tr class="odd">
-<td align="left">MCMC</td>
-<td align="left">Markov Chain Monte Carlo</td>
-</tr>
-</tbody>
-</table>
+<div id="bayessche-ansatze" class="section level1">
+<h1><span class="header-section-number">Kapitel 5</span> Bayes’sche Ansätze</h1>
+<div id="einfuhrung" class="section level2">
+<h2><span class="header-section-number">5.1</span> Einführung</h2>
+<p>In der Statistik gibt es zwei verschiedene Lehrmeinungen. Es sind dies</p>
+<ol style="list-style-type: decimal">
+<li>die <strong>Frequentisten</strong> und</li>
+<li>die <strong>Bayesianer</strong>.</li>
+</ol>
+<p>Alle bisher  vorgestellten statistischen Konzepte, so zum Beispiel <code>Least Squares</code>, <code>Maximum Likelihood</code>, <code>REML</code> und <code>BLUP</code> stammen aus dem Lager der Frequentisten.</p>
+<p>Die Unterschiede zwischen Frequentisten und Bayesianern bestehen hauptsächlich in</p>
+<ul>
+<li>deren Verständnis von Wahrscheinlichkeiten</li>
+<li>deren Unterteilung von Modell- und Datenkomponenten</li>
+<li>deren Techniken zur Schätzung von Parametern</li>
+</ul>
+<p>Die folgende Tabelle gibt eine Übersicht über die Unterschiede.</p>
+
+</div>
+<div id="das-lineare-modell" class="section level2">
+<h2><span class="header-section-number">5.2</span> Das Lineare Modell</h2>
+<p>Die Bayes’sche Art der Parameterschätzung soll an einem einfachen linearen Modell gezeigt werden. Angenommen, wir betrachten das Modell</p>
+<span class="math display">\[\begin{equation}
+y_i = \beta_0 + \beta_1 x_{i1} + \epsilon_i
+\label{eq:BayLinMod}
+\end{equation}\]</span>
+<p>wobei <span class="math inline">\(y_i\)</span> die <span class="math inline">\(i\)</span>-te Beobachtung einer Zielgrösse ist, <span class="math inline">\(\beta_0\)</span> für den Achsenabschnitt steht, <span class="math inline">\(x_1\)</span> eine erklärende Variable ist und <span class="math inline">\(\epsilon_i\)</span> für den Restterm steht. Für den Restterm nehmen wir an, dass deren Varianz konstant gleich <span class="math inline">\(\sigma^2\)</span> ist.</p>
+<div id="bekannte-und-unbekannte" class="section level3">
+<h3><span class="header-section-number">5.2.1</span> Bekannte und Unbekannte</h3>
+<p>Unter der Annahme, dass wir für die Zielgrösse <span class="math inline">\(y_i\)</span> und die erklärende Variable <span class="math inline">\(x_1\)</span> keine fehlenden Daten haben, dann machen wir als Bayesianer folgende Einteilung in bekannte und unbekannte Grössen.</p>
+<p>und als <strong>bekannte</strong> Grössen</p>
+
+</div>
+<div id="vorgehen-bei-parameterschatzung" class="section level3">
+<h3><span class="header-section-number">5.2.2</span> Vorgehen bei Parameterschätzung</h3>
+<p>Bayesianer basieren Schätzungen von unbekannten Grössen auf der sogenannten <strong>a posteriori Verteiung</strong> der unbekannten Grössen gegeben die bekannten Grössen. Die a posteriori Verteilung wird mithilfe des <strong>Satzes von Bayes</strong> aufgrund der a priori Verteilung der unbekannten und aufgrund der Likelihood berechnet.</p>
+<p>Die Bezeichnungen “a priori” und “a posteriori” beziehen sich immer auf den Zeitpunkt der Beobachtung der analysierten Daten. Die jeweiligen Verteilungen quantifizieren den Informationsstand zu den Unbekannten um jeweiligen Zeitpunkt. Dieses Konzept soll anhand der folgenden Grafik verdeutlicht werden.</p>
+<p><img src="AprioriAposteriori" width="8cm" style="display: block; margin: auto;" /></p>
+<p>Für unser Beispiel des einfachen linearen Modells, definieren wir zuerst den Vektor <span class="math inline">\(\mathbf{\beta}\)</span> als</p>
+<p><span class="math display">\[\beta = \left[\begin{array}{c} \beta_0  \\  \beta_1 \end{array} \right].\]</span></p>
+<p>Die Beobachtungen <span class="math inline">\(y_i\)</span> fassen wir ebenfalls zu einem Vektor <span class="math inline">\(y\)</span> zusammen. Für den Moment nehmen wir an, dass <span class="math inline">\(\sigma^2\)</span> bekannt sei. Eine Bayes’sche Parameterschätzung für <span class="math inline">\(\beta\)</span> basiert dann auf der a posteriori Verteilung <span class="math inline">\(f(\beta | y, \sigma^2)\)</span> der Unbekannten <span class="math inline">\(\beta\)</span> gegeben die Bekannten <span class="math inline">\(y\)</span> und <span class="math inline">\(\sigma^2\)</span>. Diese a posteriori Verteilung lässt sich mit dem Satz von Bayes, wie folgt berechnen</p>
+<span class="math display">\[\begin{eqnarray}
+f(\beta | y, \sigma^2) &amp; =       &amp; \frac{f(\beta, \sigma^2, y)}{f(y, \sigma^2)} \nonumber \\
+                       &amp; =       &amp; \frac{f(y | \beta, \sigma^2)f(\beta)f(\sigma^2)}{f(y, \sigma^2)} \nonumber \\
+                       &amp; \propto &amp; f(y | \beta, \sigma^2)f(\beta)f(\sigma^2)
+\label{LinModAPostProb}
+\end{eqnarray}\]</span>
+<p>In Gleichung () konnten wir die a posteriori Verteilung <span class="math inline">\(f(\beta | y, \sigma^2)\)</span> als Produkt der a priori Verteilungen (<span class="math inline">\(f(\beta)\)</span> und <span class="math inline">\(f(\sigma^2)\)</span>) der unbekannten Grössen <span class="math inline">\(\beta\)</span> und <span class="math inline">\(\sigma^2\)</span> und der Likelihood <span class="math inline">\(f(y | \beta, \sigma^2)\)</span> ausdrücken. Der Faktor <span class="math inline">\(f(y, \sigma^2)^{-1}\)</span> (Term im Nenner) entspricht der sogenannten Normalisierungskonstanten und ist nicht weiter von Interesse. Somit wird die a posteriori Verteilung oft als Proporzionalitätsbeziehung angegeben.</p>
+<p>Die a posteriori Verteilung <span class="math inline">\(f(\beta | y, \sigma^2)\)</span> ist in vielen Fällen nicht explizit darstellbar. Das war lange ein Problem, welches die Anwendung von Bayes’schen Analysen sehr einschränkte. Zwei Entwicklungen haben dieses Problem beseitigt.</p>
+<ol style="list-style-type: decimal">
+<li>In seinem Paper (<span class="citation">Besag (<a href="#ref-Besa1974">1974</a>)</span>) zeigte Julian Besag, dass jede posteriori Verteilung durch eine Serie von Zufallszahlen aus den voll-bedingten Verteilungen bestimmt ist. Für unser Beispiel lauten die voll-bedingten Verteilungen: Bedingte Verteilung von <span class="math inline">\(\beta_0\)</span> gegeben alle anderen Grössen: <span class="math inline">\(f(\beta_0 | \beta_1, \sigma^2, y)\)</span>, bedingte Verteilung von <span class="math inline">\(\beta_1\)</span> gegeben alle anderen Grössen: <span class="math inline">\(f(\beta_1 | \beta_0, \sigma^2, y)\)</span>.</li>
+<li>Die Entwicklung von effizienten Pseudo-Zufallszahlen-Generatoren auf dem Computer.</li>
+</ol>
+</div>
+</div>
+<div id="gibbs-sampler" class="section level2">
+<h2><span class="header-section-number">5.3</span> Gibbs Sampler</h2>
+<p>Die Umsetzung der beiden oben aufgelisteten Punkte führt zu einer Prozedur, welche als <strong>Gibbs Sampler</strong> bezeichnet wird. Wenden wir den Gibbs Sampler auf einfaches lineares Regressionsmodell an, dann resultiert das folgende Vorgehen bei der Analyse. Unabhängig vom verwendeten Modell läuft die Konstruktion einer Gibbs Sampling Prozedur immer in den folgenden Schritten ab. Diese Schritte können für die meisten Analysen wie ein Kochbuchrezept verwendet werden.</p>
+<ol style="list-style-type: decimal">
+<li>Bestimmung der a priori Verteilungen für die unbekannten Grössen.</li>
+<li>Bestimmung der Likelihood</li>
+<li>Bestimmung der voll-bedingten Verteilungen</li>
+</ol>
+<div id="a-priori-verteilungen" class="section level3">
+<h3><span class="header-section-number">5.3.1</span> A priori Verteilungen</h3>
+<p>In unserem Bespiel handelt es sich dabei um <span class="math inline">\(f(\beta)\)</span> und <span class="math inline">\(f(\sigma^2)\)</span>. In den meisten Fällen, wenn man das erste Mal eine bestimmte Art von Daten analysisern soll, empfielt es sich eine sogenannte uniformative a priori Verteilung zu wählen. Eine uninformative a priori Verteilung bedeutet einfach, dass deren Dichtewert überall gleich, also eine Konstante ist. Wenden wir zum Beispiel für die Unbekannte <span class="math inline">\(\beta\)</span> eine uninformative a priori Verteilung an, dann bedeutet das, dass wir <span class="math inline">\(f(\beta) = c\)</span>.</p>
+<p>Alternativ zu der uniformativen a priori Verteilung gibt es auch a priori Verteiungen für bestimmte unbekannte Grössen, welche als de-facto Standard aktzeptiert sind. Ein Bespiel dafür ist die a priori Verteilung der unbekannten Restvarianz, welche üblicherweise als Inverse-Chi-Quadrat Verteilung angenommen wird.</p>
+</div>
+<div id="likelihood" class="section level3">
+<h3><span class="header-section-number">5.3.2</span> Likelihood</h3>
+<p>Die Likelihood ist wie bei den Frequentisten als begingte Verteilung (<span class="math inline">\(f(y | \beta, \sigma^2)\)</span>) der Daten <span class="math inline">\(y\)</span> gegeben die Parameter (<span class="math inline">\(\beta\)</span> und <span class="math inline">\(\sigma^2\)</span>). Falls keine Daten fehlen, dann ist die Bayes’sche Likelihood und die frequentistische Likelihood gleich.</p>
+</div>
+<div id="vollbedingte-verteilungen" class="section level3">
+<h3><span class="header-section-number">5.3.3</span> Vollbedingte Verteilungen</h3>
+<p>Mit vollbedingten Verteilungen ist gemeint, dass für jede unbekannte Grösse die bedingte Verteilung gegeben alle anderen Grössen bestimmt wird. In unserem Bespiel des linearen Regressionsmodells haben wir zwei unbekannte Grössen <span class="math inline">\(\beta_0\)</span> und <span class="math inline">\(\beta_1\)</span>. Somit haben wir auch zwei vollbedingte Verteilungen. Unter der Annahme, dass unsere Daten (<span class="math inline">\(y\)</span>) einer Normalverteilung folgen, resultieren die folgenden vollbedingten Verteilungen.</p>
+
+
+<p>Aufgrund von Berechnungen, welche hier nicht gezeigt sind, können wir die oben aufgelisteten vollbedingten Verteilungen bestimmen. Die entsprechenden Verteilungen sind in der Kolonnen ganz rechts, welche mit “resultierende Verteilung” überschrieben ist, aufgelistet. Dabei steht <span class="math inline">\(\mathcal{N}()\)</span> für die Normalverteilung. Für die Erwartungswerte und Varianzen wird das Modell in Gleichung () leicht umformuliert.</p>
+<span class="math display">\[\begin{equation}
+\mathbf{y} = \mathbf{1}\beta_0 + \mathbf{x}\beta_1 + \mathbf{\epsilon}
+\label{eq:BayLinModReform}
+\end{equation}\]</span>
+<p>Aus dem obigen Modell bilden wir ein neues Modell, welches auf der rechten Seite der Gleichung nur von <span class="math inline">\(\beta_0\)</span> und <span class="math inline">\(\mathbf{\epsilon}\)</span> abhängt. Da wir wissen, dass die Verteilung der Least Squares Schätzer eine Normalverteilung ist, werden wir diese für die Bestimmung der vollbedingten Verteilungen verwenden.</p>
+<span class="math display">\[\begin{equation}
+\mathbf{w}_0 = \mathbf{1}\beta_0 + \mathbf{\epsilon}
+\label{eq:BayLinModW0}
+\end{equation}\]</span>
+<p>wobei <span class="math inline">\(\mathbf{w}_0 = \mathbf{y} - \mathbf{x}\beta_1\)</span>. Aufgrund des Modells in Gleichung () können wir den Least Squares Schätzer für <span class="math inline">\(\beta_0\)</span> aufstellen. Dieser lautet:</p>
+<span class="math display">\[\begin{equation}
+\hat{\beta}_0 = (\mathbf{1}^T\mathbf{1})^{-1}\mathbf{1}^T\mathbf{w}_0
+\label{eq:Beta0LsEst}
+\end{equation}\]</span>
+<p>Die Varianz des Least Squares Schätzers für <span class="math inline">\(\beta_0\)</span> lautet:</p>
+<span class="math display">\[\begin{equation}
+var(\hat{\beta}_0) = (\mathbf{1}^T\mathbf{1})^{-1}\sigma^2
+\label{eq:VarBeta0LsEst}
+\end{equation}\]</span>
+<p>Analog zu <span class="math inline">\(\beta_0\)</span> berechnen wir den Least Squares Schätzer für <span class="math inline">\(\beta_1\)</span> und dessen Varianz.</p>
+<span class="math display">\[\begin{equation}
+\hat{\beta}_1 = (\mathbf{x}^T\mathbf{x})^{-1}\mathbf{x}^T\mathbf{w}_1
+\label{eq:Beta1LsEst}
+\end{equation}\]</span>
+<p>wobei <span class="math inline">\(\mathbf{w}_1 = \mathbf{y} - \mathbf{1}\beta_0\)</span></p>
+<span class="math display">\[\begin{equation}
+var(\hat{\beta}_1) = (\mathbf{x}^T\mathbf{x})^{-1}\sigma^2
+\label{eq:VarBeta1LsEst}
+\end{equation}\]</span>
+</div>
+<div id="umsetzung-des-gibbs-samplers" class="section level3">
+<h3><span class="header-section-number">5.3.4</span> Umsetzung des Gibbs Samplers</h3>
+<p>Der Gibbs Sampler wird durch wiederholtes ziehen von Zufallszahlen aus den oben angegebenen vollbedingten Verteilungen umgesetzt. Das heisst, wir setzen für alle unbekannten Grössen sinnvolle Startwerte ein. Für <span class="math inline">\(\beta_0\)</span> und <span class="math inline">\(\beta_1\)</span> wählen wir <span class="math inline">\(0\)</span> als Startwert. Dann berechnen wir den Erwartungswert und die Varianz für die vollbedingte Verteilung von <span class="math inline">\(\beta_0\)</span>. Aus dieser Verteilung ziehen wir einen neuen Wert für <span class="math inline">\(\beta_0\)</span>. In einem zweiten Schritt berechnen wir den Erwartungswert und die Varianz für die vollbedingte Verteilung von <span class="math inline">\(\beta_1\)</span>, wobei wir für <span class="math inline">\(\beta_0\)</span> schon den neuen Wert einsetzen. Aus der Verteilung für <span class="math inline">\(\beta_1\)</span> ziehen wir einen neuen Wert für <span class="math inline">\(\beta_1\)</span>. Danach beginnen wir die Schritte wieder bei <span class="math inline">\(\beta_0\)</span>. Diese Schrittabfolge wiederholen wir <span class="math inline">\(10000\)</span> mal und speichern alle gezogenen Werte für <span class="math inline">\(\beta_0\)</span> und <span class="math inline">\(\beta_1\)</span>. Die Bayes’schen Parameterschätzungen entsprechen dann den Mittelwerten der gespeicherten Werte.</p>
+<p>Der folgende R-Codeblock soll die Umsetzung des Gibbs Samplers für <span class="math inline">\(\beta_0\)</span> und <span class="math inline">\(\beta_1\)</span> als Programm zeigen. Der Einfachheit halber wurde <span class="math inline">\(\sigma^2\)</span> konstant <span class="math inline">\(\sigma^2=1\)</span> angenommen.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># ### Startwerte für beta0 und beta1</span>
+beta &lt;– <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)
+<span class="co"># ### Bestimmung der Anzahl Iterationen</span>
+niter &lt;– <span class="dv">10000</span>
+<span class="co"># ### Initialisierung des Vektors mit Resultaten</span>
+meanBeta &lt;– <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)
+for (iter in <span class="dv">1</span>:niter) {
+  <span class="co"># Ziehung des Wertes des Achsenabschnitts beta0</span>
+  w &lt;– y -<span class="st"> </span>X[, <span class="dv">2</span>] *<span class="st"> </span>beta[<span class="dv">2</span>]
+  x &lt;– X[, <span class="dv">1</span>]
+  xpxi &lt;– <span class="dv">1</span>/(<span class="kw">t</span>(x) %*%<span class="st"> </span>x)
+  betaHat &lt;– <span class="kw">t</span>(x) %*%<span class="st"> </span>w *<span class="st"> </span>xpxi
+  <span class="co"># ### neue Zufallszahl fuer beta0</span>
+  beta[<span class="dv">1</span>] &lt;– <span class="kw">rnorm</span>(<span class="dv">1</span>, betaHat, <span class="kw">sqrt</span>(xpxi))
+  <span class="co"># Ziehung der Steigung beta1</span>
+  w &lt;– y -<span class="st"> </span>X[, <span class="dv">1</span>] *<span class="st"> </span>beta[<span class="dv">1</span>]
+  x &lt;– X[, <span class="dv">2</span>]
+  xpxi &lt;– <span class="dv">1</span>/(<span class="kw">t</span>(x) %*%<span class="st"> </span>x)
+  betaHat &lt;– <span class="kw">t</span>(x) %*%<span class="st"> </span>w *<span class="st"> </span>xpxi
+  <span class="co"># ### neue Zufallszahl fuer beta1</span>
+  beta[<span class="dv">2</span>] &lt;– <span class="kw">rnorm</span>(<span class="dv">1</span>, betaHat, <span class="kw">sqrt</span>(xpxi))
+  meanBeta &lt;– meanBeta +<span class="st"> </span>beta
+}
+<span class="co"># ### Ausgabe der Ergebnisse</span>
+<span class="kw">cat</span>(<span class="kw">sprintf</span>(<span class="st">&quot;Achsenabschnitt = %6.3f </span><span class="ch">\n</span><span class="st">&quot;</span>, meanBeta[<span class="dv">1</span>]/iter))
+<span class="kw">cat</span>(<span class="kw">sprintf</span>(<span class="st">&quot;Steigung = %6.3f </span><span class="ch">\n</span><span class="st">&quot;</span>, meanBeta[<span class="dv">2</span>]/iter))</code></pre></div>
+
+<!-- ------------------------------------------------------------------- --
+  -- END of document:  Below this must not be anything, except the stuff --
+  -- concerning the table of abbreviations                               -->
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Besa1974">
+<p>Besag, J. 1974. “Spatial Interaction and the Statistical Analysis of Lattice Systems.” <em>Journal of the Royal Statistical Society. Series B (Methodological)</em>, no. 36: 192–236. <a href="http://www.jstor.org/stable/2984812" class="uri">http://www.jstor.org/stable/2984812</a>.</p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="bayessche-ansatze.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="chpt-lasso.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="abkurzungen.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -287,7 +389,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/99-abbrevref.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/05-bayes.Rmd",
 "text": "Edit"
 },
 "download": ["bookdown-asmas.pdf", "bookdown-asmas.epub"],
