@@ -86,7 +86,9 @@ Thema[which(Datum == format(as.Date("2017/03/06"), "%d.%m"))] <- paste0("Lineare
 Thema[which(Datum == format(as.Date("2017/03/13"), "%d.%m"))] <- paste0("GBLUP ([slides](",sBaseUrl,"w4/asmas_qu_w4_v4.pdf))([paper](",sBaseUrl, "w4/2013_CW_GBLUP.pdf))")
 Thema[which(Datum == format(as.Date("2017/03/20"), "%d.%m"))] <- paste0("LASSO ([slides](",sBaseUrl,"w5/asmas_w5_v5.pdf))([notes](", 
                                                                         sBaseUrl, "w5/bookdown-asmas_ch4.pdf))")
-
+Thema[which(Datum == format(as.Date("2017/03/27"), "%d.%m"))] <- paste0("Bayes ([slides](",sBaseUrl,"w6/asmas_w6_v6.pdf))")
+#Thema[which(Datum == format(as.Date("2017/03/27"), "%d.%m"))] <- paste0("Bayes ([slides](",sBaseUrl,"w6/asmas_w6_v6.pdf))([notes](", 
+#                                                                        sBaseUrl, "w6/bookdown-asmas_ch5.pdf))")
 ### # create the table
 dfSlideTable <- data.frame(Woche, Datum, Thema, Wer, stringsAsFactors = FALSE)
 knitr::kable(dfSlideTable)
@@ -106,12 +108,13 @@ Thema <- vector(mode = "character", length = nNrSemesterWeeks)
 Wer <-  vector(mode = "character", length = nNrSemesterWeeks)
 Wer[2:6] <- "PvR"
 
-# links zu slides
+# links to exercises
 sBaseUrl <- "https://charlotte-ngs.github.io/GELASMFS2017/"
 Thema[which(Datum == format(as.Date("2017/02/27"), "%d.%m"))] <- paste0("[Einführung](", sBaseUrl,"w2/asmas_w2_u1.pdf)")
 Thema[which(Datum == format(as.Date("2017/03/06"), "%d.%m"))] <- paste0("[Deregression](", sBaseUrl,"w3/asmas_w3_u2.pdf)")
 Thema[which(Datum == format(as.Date("2017/03/13"), "%d.%m"))] <- paste0("[Lineare Regression](", sBaseUrl,"w4/asmas_w4_u3.pdf)")
 Thema[which(Datum == format(as.Date("2017/03/20"), "%d.%m"))] <- paste0("[Single Marker Regression](", sBaseUrl,"w5/asmas_w5_u4.pdf)")
+Thema[which(Datum == format(as.Date("2017/03/27"), "%d.%m"))] <- paste0("[Genomic BLUP](", sBaseUrl,"w6/asmas_w6_u5.pdf)")
 ### # Table
 dfExTable <- data.frame(Woche, Datum, Thema, Wer, stringsAsFactors = FALSE)
 knitr::kable(dfExTable)
@@ -131,11 +134,12 @@ Thema <- vector(mode = "character", length = nNrSemesterWeeks)
 Wer <-  vector(mode = "character", length = nNrSemesterWeeks)
 Wer[2:6] <- "PvR"
 
-# links zu slides
+# links to solutions
 sBaseUrl <- "https://charlotte-ngs.github.io/GELASMFS2017/"
 Thema[which(Datum == format(as.Date("2017/03/06"), "%d.%m"))] <- paste0("[Einführung](", sBaseUrl,"w2/asmas_w2_l1.pdf)")
 Thema[which(Datum == format(as.Date("2017/03/13"), "%d.%m"))] <- paste0("[Deregression](", sBaseUrl,"w3/asmas_w3_l2.pdf)")
 Thema[which(Datum == format(as.Date("2017/03/13"), "%d.%m"))] <- paste0("[Lineare Regression](", sBaseUrl,"w4/asmas_w4_l3.pdf)")
+Thema[which(Datum == format(as.Date("2017/03/20"), "%d.%m"))] <- paste0("[Single Marker Regression](", sBaseUrl,"w5/asmas_w5_l4.pdf)")
 ### # Table
 dSolStart <- data.frame(Woche, Datum, Thema, Wer, stringsAsFactors = FALSE)
 knitr::kable(dSolStart)
