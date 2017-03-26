@@ -145,12 +145,14 @@ knitr::kable(dSolStart)
 ### Weiteres Material
 ```{r MiscTable, echo=FALSE, results='asis'}
 sBaseUrl <- "https://charlotte-ngs.github.io/GELASMFS2017/"
-Woche <- c(2,2)
+Woche <- c(2,2,6)
 Datum <- c(format(as.Date("2017/02/27"), "%d.%m"),
-           format(as.Date("2017/02/27"), "%d.%m"))
+           format(as.Date("2017/02/27"), "%d.%m"),
+           format(as.Date("2017/03/27"), "%d.%m"))
 Thema <- c(paste0("[Unterlagen](", sBaseUrl, "bookdown-asmas/index.html)"),
-           paste0("[Zusammenfassung Deregression](", sBaseUrl, "w2/DeRegressEbvSummaryGTF2009.pdf)"))
-Wer <- c("PvR","PvR")
+           paste0("[Zusammenfassung Deregression](", sBaseUrl, "w2/DeRegressEbvSummaryGTF2009.pdf)"),
+           paste0("[Prüfung](", sBaseUrl, "w6/asmas_2016_exam_qu.pdf) und [Lösung](", sBaseUrl, "w6/asmas_2016_exam_sol.pdf) FS 2016"))
+Wer <- c("PvR","PvR","PvR")
 
 ### # Tabelle
 dfMiscTable <- data.frame(Woche, Datum, Thema, Wer, stringsAsFactors = FALSE)
