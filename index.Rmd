@@ -86,9 +86,9 @@ Thema[which(Datum == format(as.Date("2017/03/06"), "%d.%m"))] <- paste0("Lineare
 Thema[which(Datum == format(as.Date("2017/03/13"), "%d.%m"))] <- paste0("GBLUP ([slides](",sBaseUrl,"w4/asmas_qu_w4_v4.pdf))([paper](",sBaseUrl, "w4/2013_CW_GBLUP.pdf))")
 Thema[which(Datum == format(as.Date("2017/03/20"), "%d.%m"))] <- paste0("LASSO ([slides](",sBaseUrl,"w5/asmas_w5_v5.pdf))([notes](", 
                                                                         sBaseUrl, "w5/bookdown-asmas_ch4.pdf))")
-Thema[which(Datum == format(as.Date("2017/03/27"), "%d.%m"))] <- paste0("Bayes ([slides](",sBaseUrl,"w6/asmas_w6_v6.pdf))")
-#Thema[which(Datum == format(as.Date("2017/03/27"), "%d.%m"))] <- paste0("Bayes ([slides](",sBaseUrl,"w6/asmas_w6_v6.pdf))([notes](", 
-#                                                                        sBaseUrl, "w6/bookdown-asmas_ch5.pdf))")
+#Thema[which(Datum == format(as.Date("2017/03/27"), "%d.%m"))] <- paste0("Bayes ([slides](",sBaseUrl,"w6/asmas_w6_v6.pdf))")
+Thema[which(Datum == format(as.Date("2017/03/27"), "%d.%m"))] <- paste0("Bayes ([slides](",sBaseUrl,"w6/asmas_w6_v6.pdf))([notes](", 
+                                                                        sBaseUrl, "w6/bookdown-asmas_ch5.pdf))")
 ### # create the table
 dfSlideTable <- data.frame(Woche, Datum, Thema, Wer, stringsAsFactors = FALSE)
 knitr::kable(dfSlideTable)
