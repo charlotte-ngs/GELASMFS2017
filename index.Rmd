@@ -89,6 +89,7 @@ Thema[which(Datum == format(as.Date("2017/03/20"), "%d.%m"))] <- paste0("LASSO (
 #Thema[which(Datum == format(as.Date("2017/03/27"), "%d.%m"))] <- paste0("Bayes ([slides](",sBaseUrl,"w6/asmas_w6_v6.pdf))")
 Thema[which(Datum == format(as.Date("2017/03/27"), "%d.%m"))] <- paste0("Bayes ([slides](",sBaseUrl,"w6/asmas_w6_v6.pdf))([notes](", 
                                                                         sBaseUrl, "w6/bookdown-asmas_ch5.pdf))")
+Thema[which(Datum == format(as.Date("2017/04/03"), "%d.%m"))] <- paste0("Einführung ([slides](",sBaseUrl,"w7/test.pdf)) )
 ### # create the table
 dfSlideTable <- data.frame(Woche, Datum, Thema, Wer, stringsAsFactors = FALSE)
 knitr::kable(dfSlideTable)
