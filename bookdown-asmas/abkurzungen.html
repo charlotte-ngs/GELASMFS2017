@@ -25,14 +25,14 @@
 <meta name="author" content="Peter von Rohr">
 
 
-<meta name="date" content="2017-03-26">
+<meta name="date" content="2017-04-20">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="bayessche-ansatze.html">
+<link rel="prev" href="bayes.html">
 <link rel="next" href="references.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -156,7 +156,22 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.7.3" data-path="linreg.html"><a href="linreg.html#bemerkungen"><i class="fa fa-check"></i><b>2.7.3</b> Bemerkungen</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="gblup.html"><a href="gblup.html"><i class="fa fa-check"></i><b>3</b> Genomic Best Linear Unbiased Prediction</a></li>
+<li class="chapter" data-level="3" data-path="gblup.html"><a href="gblup.html"><i class="fa fa-check"></i><b>3</b> Genomic Best Linear Unbiased Prediction (GBLUP)</a><ul>
+<li class="chapter" data-level="3.1" data-path="gblup.html"><a href="gblup.html#dna-markers"><i class="fa fa-check"></i><b>3.1</b> DNA Markers</a></li>
+<li class="chapter" data-level="3.2" data-path="gblup.html"><a href="gblup.html#markerinformationen-in-blup-verfahren"><i class="fa fa-check"></i><b>3.2</b> Markerinformationen in BLUP-Verfahren</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="gblup.html"><a href="gblup.html#ridge-regression-rr-blup"><i class="fa fa-check"></i><b>3.2.1</b> Ridge Regression (RR) BLUP</a></li>
+<li class="chapter" data-level="3.2.2" data-path="gblup.html"><a href="gblup.html#genomic-blup-gblup"><i class="fa fa-check"></i><b>3.2.2</b> Genomic BLUP (GBLUP)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="gblup.html"><a href="gblup.html#genomische-verwandtschaftsmatrix-grm"><i class="fa fa-check"></i><b>3.3</b> Genomische Verwandtschaftsmatrix (GRM)</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="gblup.html"><a href="gblup.html#herleitung-der-grm"><i class="fa fa-check"></i><b>3.3.1</b> Herleitung der GRM</a></li>
+<li class="chapter" data-level="3.3.2" data-path="gblup.html"><a href="gblup.html#genetische-effekte-als-summe-der-snp-effekte"><i class="fa fa-check"></i><b>3.3.2</b> Genetische Effekte als Summe der SNP-Effekte</a></li>
+<li class="chapter" data-level="3.3.3" data-path="gblup.html"><a href="gblup.html#genetische-effekte-als-abweichungen"><i class="fa fa-check"></i><b>3.3.3</b> Genetische Effekte als Abweichungen</a></li>
+<li class="chapter" data-level="3.3.4" data-path="gblup.html"><a href="gblup.html#alternative-codierung"><i class="fa fa-check"></i><b>3.3.4</b> Alternative Codierung</a></li>
+<li class="chapter" data-level="3.3.5" data-path="gblup.html"><a href="gblup.html#varianz-der-genetischen-effekte"><i class="fa fa-check"></i><b>3.3.5</b> Varianz der genetischen Effekte</a></li>
+<li class="chapter" data-level="3.3.6" data-path="gblup.html"><a href="gblup.html#r-code-zur-berechnung-der-grm"><i class="fa fa-check"></i><b>3.3.6</b> R-Code zur Berechnung der GRM</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="gblup.html"><a href="gblup.html#wie-gblup-funktioniert"><i class="fa fa-check"></i><b>3.4</b> Wie GBLUP funktioniert</a></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="chpt-lasso.html"><a href="chpt-lasso.html"><i class="fa fa-check"></i><b>4</b> Least Absolute Shrinkage And Selection Operator (LASSO)</a><ul>
 <li class="chapter" data-level="4.1" data-path="chpt-lasso.html"><a href="chpt-lasso.html#stochastische-restkomponente"><i class="fa fa-check"></i><b>4.1</b> Stochastische Restkomponente</a></li>
 <li class="chapter" data-level="4.2" data-path="chpt-lasso.html"><a href="chpt-lasso.html#parameterschatzung"><i class="fa fa-check"></i><b>4.2</b> Parameterschätzung</a></li>
@@ -168,17 +183,17 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.5" data-path="chpt-lasso.html"><a href="chpt-lasso.html#bestimmung-von-lambda"><i class="fa fa-check"></i><b>4.5</b> Bestimmung von <span class="math inline">\(\lambda\)</span></a></li>
 <li class="chapter" data-level="4.6" data-path="chpt-lasso.html"><a href="chpt-lasso.html#analyse-mit-lasso-in-r"><i class="fa fa-check"></i><b>4.6</b> Analyse mit LASSO in R</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="bayessche-ansatze.html"><a href="bayessche-ansatze.html"><i class="fa fa-check"></i><b>5</b> Bayes’sche Ansätze</a><ul>
-<li class="chapter" data-level="5.1" data-path="bayessche-ansatze.html"><a href="bayessche-ansatze.html#einfuhrung"><i class="fa fa-check"></i><b>5.1</b> Einführung</a></li>
-<li class="chapter" data-level="5.2" data-path="bayessche-ansatze.html"><a href="bayessche-ansatze.html#das-lineare-modell"><i class="fa fa-check"></i><b>5.2</b> Das Lineare Modell</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="bayessche-ansatze.html"><a href="bayessche-ansatze.html#bekannte-und-unbekannte"><i class="fa fa-check"></i><b>5.2.1</b> Bekannte und Unbekannte</a></li>
-<li class="chapter" data-level="5.2.2" data-path="bayessche-ansatze.html"><a href="bayessche-ansatze.html#vorgehen-bei-parameterschatzung"><i class="fa fa-check"></i><b>5.2.2</b> Vorgehen bei Parameterschätzung</a></li>
+<li class="chapter" data-level="5" data-path="bayes.html"><a href="bayes.html"><i class="fa fa-check"></i><b>5</b> Bayes’sche Ansätze</a><ul>
+<li class="chapter" data-level="5.1" data-path="bayes.html"><a href="bayes.html#einfuhrung"><i class="fa fa-check"></i><b>5.1</b> Einführung</a></li>
+<li class="chapter" data-level="5.2" data-path="bayes.html"><a href="bayes.html#das-lineare-modell"><i class="fa fa-check"></i><b>5.2</b> Das Lineare Modell</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="bayes.html"><a href="bayes.html#bekannte-und-unbekannte"><i class="fa fa-check"></i><b>5.2.1</b> Bekannte und Unbekannte</a></li>
+<li class="chapter" data-level="5.2.2" data-path="bayes.html"><a href="bayes.html#vorgehen-bei-parameterschatzung"><i class="fa fa-check"></i><b>5.2.2</b> Vorgehen bei Parameterschätzung</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="bayessche-ansatze.html"><a href="bayessche-ansatze.html#gibbs-sampler"><i class="fa fa-check"></i><b>5.3</b> Gibbs Sampler</a><ul>
-<li class="chapter" data-level="5.3.1" data-path="bayessche-ansatze.html"><a href="bayessche-ansatze.html#a-priori-verteilungen"><i class="fa fa-check"></i><b>5.3.1</b> A priori Verteilungen</a></li>
-<li class="chapter" data-level="5.3.2" data-path="bayessche-ansatze.html"><a href="bayessche-ansatze.html#likelihood"><i class="fa fa-check"></i><b>5.3.2</b> Likelihood</a></li>
-<li class="chapter" data-level="5.3.3" data-path="bayessche-ansatze.html"><a href="bayessche-ansatze.html#vollbedingte-verteilungen"><i class="fa fa-check"></i><b>5.3.3</b> Vollbedingte Verteilungen</a></li>
-<li class="chapter" data-level="5.3.4" data-path="bayessche-ansatze.html"><a href="bayessche-ansatze.html#umsetzung-des-gibbs-samplers"><i class="fa fa-check"></i><b>5.3.4</b> Umsetzung des Gibbs Samplers</a></li>
+<li class="chapter" data-level="5.3" data-path="bayes.html"><a href="bayes.html#gibbs-sampler"><i class="fa fa-check"></i><b>5.3</b> Gibbs Sampler</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="bayes.html"><a href="bayes.html#a-priori-verteilungen"><i class="fa fa-check"></i><b>5.3.1</b> A priori Verteilungen</a></li>
+<li class="chapter" data-level="5.3.2" data-path="bayes.html"><a href="bayes.html#likelihood"><i class="fa fa-check"></i><b>5.3.2</b> Likelihood</a></li>
+<li class="chapter" data-level="5.3.3" data-path="bayes.html"><a href="bayes.html#vollbedingte-verteilungen"><i class="fa fa-check"></i><b>5.3.3</b> Vollbedingte Verteilungen</a></li>
+<li class="chapter" data-level="5.3.4" data-path="bayes.html"><a href="bayes.html#umsetzung-des-gibbs-samplers"><i class="fa fa-check"></i><b>5.3.4</b> Umsetzung des Gibbs Samplers</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="abkurzungen.html"><a href="abkurzungen.html"><i class="fa fa-check"></i>Abkürzungen</a></li>
@@ -234,6 +249,30 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <td align="left">Quantil Quantil</td>
 </tr>
 <tr class="even">
+<td align="left">SNP</td>
+<td align="left">Single Nucleotide Polymorphism</td>
+</tr>
+<tr class="odd">
+<td align="left">BLUE</td>
+<td align="left">Best Linear Unbiased Estimation</td>
+</tr>
+<tr class="even">
+<td align="left">BLUP</td>
+<td align="left">Best Linear Unbiased Prediction</td>
+</tr>
+<tr class="odd">
+<td align="left">GRM</td>
+<td align="left">Genomic Relationship Matrix</td>
+</tr>
+<tr class="even">
+<td align="left">RR</td>
+<td align="left">Ridge Regression</td>
+</tr>
+<tr class="odd">
+<td align="left">GBLUP</td>
+<td align="left">Genomic BLUP</td>
+</tr>
+<tr class="even">
 <td align="left">LASSO</td>
 <td align="left">Least Absolute Shrinkage And Selection Operator</td>
 </tr>
@@ -257,7 +296,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="bayessche-ansatze.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="bayes.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
