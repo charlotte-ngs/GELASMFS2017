@@ -104,12 +104,14 @@ knitr::kable(dfSlideTable)
 dExStart <- as.Date("2017/02/20")
 # set number of weeks in semester
 nNrSemesterWeeks <- 6
+nNrWeeksWithEx <- nNrSemesterWeeks + 1
 # define columns for weaks, dates, and subjects
-Woche <- 1:nNrSemesterWeeks
-Datum <- format(seq(dExStart, by = "week", length.out = nNrSemesterWeeks), "%d.%m")
-Thema <- vector(mode = "character", length = nNrSemesterWeeks)
-Wer <-  vector(mode = "character", length = nNrSemesterWeeks)
-Wer[2:6] <- "PvR"
+Woche <- c(1:nNrSemesterWeeks,nNrSemesterWeeks)
+Datum <- c(format(seq(dExStart, by = "week", length.out = nNrSemesterWeeks), "%d.%m"),
+           format(as.Date("2017/04/27"), "%d.%m"))
+Thema <- vector(mode = "character", length = nNrWeeksWithEx)
+Wer <-  vector(mode = "character", length = nNrWeeksWithEx)
+Wer[2:nNrWeeksWithEx] <- "PvR"
 
 # links to exercises
 sBaseUrl <- "https://charlotte-ngs.github.io/GELASMFS2017/"
@@ -118,6 +120,8 @@ Thema[which(Datum == format(as.Date("2017/03/06"), "%d.%m"))] <- paste0("[Deregr
 Thema[which(Datum == format(as.Date("2017/03/13"), "%d.%m"))] <- paste0("[Lineare Regression](", sBaseUrl,"w4/asmas_w4_u3.pdf)")
 Thema[which(Datum == format(as.Date("2017/03/20"), "%d.%m"))] <- paste0("[Single Marker Regression](", sBaseUrl,"w5/asmas_w5_u4.pdf)")
 Thema[which(Datum == format(as.Date("2017/03/27"), "%d.%m"))] <- paste0("[Genomic BLUP](", sBaseUrl,"w6/asmas_w6_u5.pdf)")
+Thema[which(Datum == format(as.Date("2017/04/27"), "%d.%m"))] <- paste0("[Bayes und Lasso](", sBaseUrl,"w6/asmas_w6_u6.pdf)")
+
 ### # Table
 dfExTable <- data.frame(Woche, Datum, Thema, Wer, stringsAsFactors = FALSE)
 knitr::kable(dfExTable)
@@ -130,12 +134,14 @@ knitr::kable(dfExTable)
 dSolStart <- as.Date("2017/02/20")
 # set number of weeks in semester
 nNrSemesterWeeks <- 6
+nNrWeeksWithEx <- nNrSemesterWeeks + 1
 # define columns for weaks, dates, and subjects
-Woche <- 1:nNrSemesterWeeks
-Datum <- format(seq(dExStart, by = "week", length.out = nNrSemesterWeeks), "%d.%m")
-Thema <- vector(mode = "character", length = nNrSemesterWeeks)
-Wer <-  vector(mode = "character", length = nNrSemesterWeeks)
-Wer[2:6] <- "PvR"
+Woche <- c(1:nNrSemesterWeeks,nNrSemesterWeeks)
+Datum <- c(format(seq(dExStart, by = "week", length.out = nNrSemesterWeeks), "%d.%m"),
+           format(as.Date("2017/04/27"), "%d.%m"))
+Thema <- vector(mode = "character", length = nNrWeeksWithEx)
+Wer <-  vector(mode = "character", length = nNrWeeksWithEx)
+Wer[2:nNrWeeksWithEx] <- "PvR"
 
 # links to solutions
 sBaseUrl <- "https://charlotte-ngs.github.io/GELASMFS2017/"
@@ -144,6 +150,7 @@ Thema[which(Datum == format(as.Date("2017/03/13"), "%d.%m"))] <- paste0("[Deregr
 Thema[which(Datum == format(as.Date("2017/03/13"), "%d.%m"))] <- paste0("[Lineare Regression](", sBaseUrl,"w4/asmas_w4_l3.pdf)")
 Thema[which(Datum == format(as.Date("2017/03/20"), "%d.%m"))] <- paste0("[Single Marker Regression](", sBaseUrl,"w5/asmas_w5_l4.pdf)")
 Thema[which(Datum == format(as.Date("2017/03/27"), "%d.%m"))] <- paste0("[Genomic BLUP](", sBaseUrl,"w6/asmas_w6_l5.pdf)")
+Thema[which(Datum == format(as.Date("2017/04/27"), "%d.%m"))] <- paste0("[Bayes und Lasso](", sBaseUrl,"w6/asmas_w6_l6.pdf)")
 ### # Table
 dSolStart <- data.frame(Woche, Datum, Thema, Wer, stringsAsFactors = FALSE)
 knitr::kable(dSolStart)
