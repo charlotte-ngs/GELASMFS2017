@@ -94,7 +94,7 @@ Thema[which(Datum == format(as.Date("2017/04/10"), "%d.%m"))] <- paste0("ZWS Rin
 Thema[which(Datum == format(as.Date("2017/04/24"), "%d.%m"))] <- paste0("ZWS Rind ([slides](",sBaseUrl,"w10/Slides_20170424_Upload.pdf))([Modell FBK](",sBaseUrl, "w10/Modell_FBK.pdf))" )
 Thema[which(Datum == format(as.Date("2017/05/08"), "%d.%m"))] <- paste0("ZWS Rind ([slides](",sBaseUrl,"w12/Slides_20170508_Upload.pdf))" )
 Thema[which(Datum == format(as.Date("2017/05/15"), "%d.%m"))] <- paste0("QualitasAG ([slides](",sBaseUrl,"w13/ETH-Besuch_Qualitas_20170515.pdf))" )
-Thema[which(Datum == format(as.Date("2017/05/22"), "%d.%m"))] <- paste0("ZWS Schwein ([slides](",sBaseUrl,"w14/Zuchtwertschätzung Vorlesung ETH Zürich Mai2017.pdf))([ZWS Rind](",sBaseUrl, "w14/Slides_20170522.pdf))" )
+Thema[which(Datum == format(as.Date("2017/05/22"), "%d.%m"))] <- paste0("ZWS Schwein ([slides](",sBaseUrl,"w14/Zuchtwertschätzung Vorlesung ETH Zürich Mai2017.pdf)) / ZWS Rind ([slides](",sBaseUrl,"w14/Slides_20170522.pdf))" )
 ### # create the table
 dfSlideTable <- data.frame(Woche, Datum, Thema, Wer, stringsAsFactors = FALSE)
 knitr::kable(dfSlideTable)
